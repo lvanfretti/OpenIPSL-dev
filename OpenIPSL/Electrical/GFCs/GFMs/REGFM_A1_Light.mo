@@ -18,7 +18,7 @@ model REGFM_A1_Light
     f0=f0,
     mp=mp,
     Tr=Tr) annotation (Placement(transformation(extent={{-40,-60},{0,-20}})));
-  Modelica.Blocks.Math.Gain gain2P0pu(k=VS.M_b/VS.S_b)
+  Modelica.Blocks.Math.Gain gain2P0pu(k=1/SysData.S_b)
                                               annotation (Placement(
         transformation(
         extent={{-8,-8},{8,8}},
@@ -37,7 +37,7 @@ model REGFM_A1_Light
     annotation (Placement(transformation(extent={{-82,-58},{-62,-38}})));
   Modelica.Blocks.Sources.RealExpression sig_q0(y=VS.q0)
     annotation (Placement(transformation(extent={{-84,-10},{-64,10}})));
-  Modelica.Blocks.Math.Gain gain2Q0pu(k=VS.M_b/VS.S_b)
+  Modelica.Blocks.Math.Gain gain2Q0pu(k=1/SysData.S_b)
                                                annotation (Placement(
         transformation(
         extent={{-8,-8},{8,8}},
