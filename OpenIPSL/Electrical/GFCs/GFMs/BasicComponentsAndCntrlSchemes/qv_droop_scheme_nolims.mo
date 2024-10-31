@@ -102,7 +102,7 @@ protected
   //  parameter Real Q0=5.416582/100 "Output value at initialization in pu (System Base), e.g. Q = 5.416582/100 ";
   parameter Real E0(fixed=false);
   // parameter Real E0=1.01 "Initial or guess value of output of Edroop";
-  parameter Real V0(fixed=false);
+  parameter Real V0(fixed=false, start=Vt0);
 //  parameter Real V0=1.0  "Output value at initialization in pu (System Base), e.g. Pout = 40.0/100 ";
 public
   Modelica.Blocks.Interfaces.RealInput Vt0
@@ -115,6 +115,7 @@ public
 initial equation
     Q0 = Qout0 "Assign the value coming from the voltage source to the inital value of PQ0 used by the filter block";
     E0 = Emag0 "Assign the value of the internal voltage magnitude of the voltage source";
+    V0 = Vt0 "Assign the value coming from the voltage source to the initial value of V0 used by the filter block";
 equation
   connect(Qlimsig.y, qv_drp1.Qlim)
     annotation (Line(points={{-30,-79},{-30,-48}},       color={0,0,127}));
