@@ -102,7 +102,7 @@ protected
   //  parameter Real Q0=5.416582/100 "Output value at initialization in pu (System Base), e.g. Q = 5.416582/100 ";
   parameter Real E0(fixed=false);
   // parameter Real E0=1.01 "Initial or guess value of output of Edroop";
-  parameter Real V0(fixed=false, start=Vt0);
+  parameter Real V0(fixed=false);
 //  parameter Real V0=1.0  "Output value at initialization in pu (System Base), e.g. Pout = 40.0/100 ";
 public
   Modelica.Blocks.Interfaces.RealInput Vt0
