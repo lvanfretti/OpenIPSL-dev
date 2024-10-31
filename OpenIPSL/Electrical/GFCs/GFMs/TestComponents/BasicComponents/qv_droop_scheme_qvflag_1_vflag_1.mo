@@ -26,7 +26,7 @@ model qv_droop_scheme_qvflag_1_vflag_1
     annotation (Placement(transformation(extent={{60,-10},{80,10}})));
   Modelica.Blocks.Sources.Constant Q0(k=5.416582/100)
     annotation (Placement(transformation(extent={{-80,-60},{-60,-40}})));
-  Modelica.Blocks.Sources.Constant E0(k=1.049780011) annotation (
+  Modelica.Blocks.Sources.Constant E0(k=1.04978)     annotation (
       Placement(transformation(
         extent={{-10,-10},{10,10}},
         rotation=180,

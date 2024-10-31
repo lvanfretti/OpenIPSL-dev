@@ -97,13 +97,6 @@ model qv_droop_scheme_nolims
         rotation=90,
         origin={80,-220})));
 
-protected
-  parameter Real Q0(fixed=false);
-  //  parameter Real Q0=5.416582/100 "Output value at initialization in pu (System Base), e.g. Q = 5.416582/100 ";
-  parameter Real E0(fixed=false);
-  // parameter Real E0=1.01 "Initial or guess value of output of Edroop";
-  parameter Real V0(fixed=false);
-//  parameter Real V0=1.0  "Output value at initialization in pu (System Base), e.g. Pout = 40.0/100 ";
 public
   Modelica.Blocks.Interfaces.RealInput Vt0
     "Initial value of the terminal voltage" annotation (Placement(
@@ -112,6 +105,12 @@ public
         rotation=270,
         origin={0,220})));
   parameter Real mq=0.05 "Q-V droop gain. Range: [0-0.20] pu";
+
+protected
+  parameter Real Q0(fixed=false);
+  parameter Real E0(fixed=false);
+  parameter Real V0(fixed=false);
+
 initial equation
     Q0 = Qout0 "Assign the value coming from the voltage source to the inital value of PQ0 used by the filter block";
     E0 = Emag0 "Assign the value of the internal voltage magnitude of the voltage source";
