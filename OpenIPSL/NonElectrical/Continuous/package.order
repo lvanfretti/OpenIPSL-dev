@@ -2,6 +2,8 @@ DerivativeLag
 IntegratorLimVar
 LeadLag
 LeadLagLim
+PI_No_Windup
+PID_No_Windup
 RampTrackingFilter
 SimpleLag
 SimpleLagLim
