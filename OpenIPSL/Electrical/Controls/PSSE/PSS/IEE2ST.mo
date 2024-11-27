@@ -76,19 +76,19 @@ initial equation
   ICS10 = V_S1;
   ICS20 = V_S2;
 equation
-  if V_CU == 0 and not V_CL == 0 then
+  if abs(V_CU) < Modelica.Constants.eps and abs(V_CL) >= Modelica.Constants.eps then
     if VCT > V_CL then
       VOTHSG = VSS;
     else
       VOTHSG = 0;
     end if;
-  elseif V_CL == 0 and not V_CU == 0 then
+  elseif abs(V_CL) < Modelica.Constants.eps and abs(V_CU) >= Modelica.Constants.eps then
     if VCT < V_CU then
       VOTHSG = VSS;
     else
       VOTHSG = 0;
     end if;
-  elseif V_CU == 0 and V_CL == 0 then
+  elseif abs(V_CU) < Modelica.Constants.eps and abs(V_CL) < Modelica.Constants.eps then
     VOTHSG = VSS;
   elseif VCT > V_CL and VCT < V_CU then
     VOTHSG = VSS;
