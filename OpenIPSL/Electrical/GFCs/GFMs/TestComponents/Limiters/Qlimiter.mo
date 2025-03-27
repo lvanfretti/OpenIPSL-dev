@@ -1,7 +1,7 @@
 within OpenIPSL.Electrical.GFCs.GFMs.TestComponents.Limiters;
 model Qlimiter "Tests the Qlimiter"
   extends Modelica.Icons.Example;
-  nypaAGILeComponents.Components.GFC_REGF_A1.Modelica.CntrlSchemeComponents_with_P_and_QLimiters.Qlimiter
+  LimitersAndCntrlSchemes.Qlimiter
     Qlim_upper annotation (Placement(transformation(extent={{-20,40},{20,80}})));
   Modelica.Blocks.Sources.Constant Q0_ini(k=0.0)
     annotation (Placement(transformation(extent={{-60,-10},{-40,10}})));
@@ -15,7 +15,7 @@ model Qlimiter "Tests the Qlimiter"
   Modelica.Blocks.Interfaces.RealOutput Qlim_out_upper
     "Reactive power limiter output signal"
     annotation (Placement(transformation(extent={{100,50},{120,70}})));
-  nypaAGILeComponents.Components.GFC_REGF_A1.Modelica.CntrlSchemeComponents_with_P_and_QLimiters.Qlimiter
+  LimitersAndCntrlSchemes.Qlimiter
     Qlim_lower
     annotation (Placement(transformation(extent={{-20,-20},{20,-60}})));
   Modelica.Blocks.Sources.Pulse Qfilt_lower(
