@@ -14,7 +14,7 @@ model REGFMA1wPQLimiters
     M_b=M_b,
     R_a=R_a,
     X_d=X_d) annotation (Placement(transformation(extent={{20,-20},{60,20}})));
-  LimitersAndCntrlSchemes.PfdrpControlScheme pfdroopcntrl(
+  LimitersAndCntrlSchemes.PfdrpControlSchemePLim pfdroopcntrl(
     f0=f0,
     mp=mp,
     Tr=Tr,
@@ -29,8 +29,7 @@ model REGFMA1wPQLimiters
         extent={{-8,-8},{8,8}},
         rotation=180,
         origin={12,-86})));
-  LimitersAndCntrlSchemes.QVdrpCntrlScheme
-    q_v_droop_scheme(
+  LimitersAndCntrlSchemes.QVdrpCntrlSchemeQLim q_v_droop_scheme(
     Tr=qTr,
     EMax=EMax,
     EMin=EMin,

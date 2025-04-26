@@ -1,13 +1,9 @@
 within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes;
-model QVdrpCntrlSchemeNoLims
-  "Q-v droop control scheme without Qmax/Qmin limits"
+partial model QVdrpCntrlSchemeBase
+  "Partial/Base model of the Q-v droop control scheme without Qmax/Qmin limits"
   import Modelica;
   QVdrp qv_drp1(k=mq)
     annotation (Placement(transformation(extent={{-60,-40},{0,40}})));
-  Modelica.Blocks.Sources.Constant Qlimsig(k=0) "Reactive power limiter signal"
-    annotation (Placement(transformation(extent={{-10,-10},{10,10}},
-        rotation=90,
-        origin={-30,-90})));
   LPFilter Qfilt(Tr=Tr, y0val=Q0)
     annotation (Placement(transformation(extent={{-180,-170},{-160,-150}})));
   Modelica.Blocks.Interfaces.RealInput Qmeas
@@ -116,8 +112,6 @@ initial equation
     E0 = Emag0 "Assign the value of the internal voltage magnitude of the voltage source";
     V0 = Vt0 "Assign the value coming from the voltage source to the initial value of V0 used by the filter block";
 equation
-  connect(Qlimsig.y, qv_drp1.Qlim)
-    annotation (Line(points={{-30,-79},{-30,-48}},       color={0,0,127}));
   connect(Qfilt.y, qv_drp1.Qfilt) annotation (Line(points={{-159,-160},{-152,-160},
           {-152,-100},{-80,-100},{-80,-24},{-66,-24}},
                                color={0,0,127}));
@@ -202,4 +196,4 @@ Set --> PI with Limiter"),
           textString="u2 = false
 VFlag = 0 
 Set --> E Limited")}));
-end QVdrpCntrlSchemeNoLims;
+end QVdrpCntrlSchemeBase;

@@ -1,6 +1,6 @@
 within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes;
-model PFdrpCntrlSchemeNoLimiters
-  "P-f droop control scheme without Pmax/Pmin limiters"
+partial model PFdrpCntrlSchemeBase
+  "Partial / Base model of the P-f droop control scheme base model to use with variants with and without P limiters"
   import Modelica;
   outer OpenIPSL.Electrical.SystemBase SysData;
   LPFilter Pfilt(Tr=Tr, y0val=P0)
@@ -31,8 +31,6 @@ model PFdrpCntrlSchemeNoLimiters
   Modelica.Blocks.Interfaces.RealInput Pref "Active power reference"
     annotation (Placement(transformation(extent={{-240,60},{-200,100}}),
         iconTransformation(extent={{-240,60},{-200,100}})));
-  Modelica.Blocks.Sources.Constant Plimsig(k=0) "Active power limiter signal"
-    annotation (Placement(transformation(extent={{-40,-60},{-20,-40}})));
   Modelica.Blocks.Interfaces.RealInput Pout0
     "Initial value of the active power from the voltage source" annotation (
       Placement(transformation(
@@ -67,8 +65,6 @@ equation
   connect(pfdroop.Pref, Pref)
     annotation (Line(points={{-24,0},{-40,0},{-40,80},{-220,80}},
                                                 color={0,0,127}));
-  connect(Plimsig.y,pfdroop. Plim_in)
-    annotation (Line(points={{-19,-50},{-8,-50},{-8,-24}}, color={0,0,127}));
   connect(Edelta0, pfdroop.Edelta0) annotation (Line(points={{80,-220},{80,-180},
           {8,-180},{8,-24}},color={0,0,127}));
   connect(pfdroop.delta_droop, delta_droop)
@@ -88,4 +84,4 @@ equation
           textColor={238,46,47},
           textString="No Plims")}),                              Diagram(
         coordinateSystem(preserveAspectRatio=false, extent={{-200,-200},{200,200}})));
-end PFdrpCntrlSchemeNoLimiters;
+end PFdrpCntrlSchemeBase;

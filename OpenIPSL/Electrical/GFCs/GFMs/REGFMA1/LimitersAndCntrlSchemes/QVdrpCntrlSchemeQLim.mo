@@ -1,9 +1,7 @@
 within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.LimitersAndCntrlSchemes;
-model QVdrpCntrlScheme "Q-v droop control scheme with Qmin/Qmax inputs"
+model QVdrpCntrlSchemeQLim "Q-v droop control scheme with Qmin/Qmax inputs"
   extends
-    OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes.QVdrpCntrlSchemeNoLims
-                                                                                       (break
-      Qlimsig);
+    OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes.QVdrpCntrlSchemeBase;
   Qlimiter
     qlimiter(
     Qmax=Qmax,
@@ -48,4 +46,4 @@ equation
           extent={{-98,-20},{98,-82}},
           textColor={28,108,200},
           textString="Qlim in")}));
-end QVdrpCntrlScheme;
+end QVdrpCntrlSchemeQLim;
