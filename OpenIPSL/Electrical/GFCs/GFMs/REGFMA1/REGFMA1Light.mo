@@ -14,7 +14,7 @@ model REGFMA1Light
     v_0=v_0,
     angle_0=angle_0)
     annotation (Placement(transformation(extent={{20,-20},{60,20}})));
-  BasicComponentsAndCntrlSchemes.PFdrpCntrlSchemeBase pfdroopcntrl(
+  BasicComponentsAndCntrlSchemes.PFdrpScheme pfdroopcntrl(
     f0=f0,
     mp=mp,
     Tr=Tr) annotation (Placement(transformation(extent={{-40,-60},{0,-20}})));
@@ -24,7 +24,7 @@ model REGFMA1Light
         extent={{-8,-8},{8,8}},
         rotation=180,
         origin={12,-86})));
-  BasicComponentsAndCntrlSchemes.QVdrpCntrlSchemeBase q_v_droop_scheme(
+  BasicComponentsAndCntrlSchemes.QVdrpCntrlScheme q_v_droop_scheme(
     Tr=qTr,
     EMax=EMax,
     EMin=EMin,
