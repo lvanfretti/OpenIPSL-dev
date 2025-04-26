@@ -1,11 +1,10 @@
-within OpenIPSL.Electrical.GFCs.GFMs;
-model REGFM_A1_incl_Limiters
+within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1;
+model REGFMA1wPQLimiters
   "Grid Following Converter with droop type REGFM_A1 including limiters"
   import Modelica;
   outer OpenIPSL.Electrical.SystemBase SysData;
 
-  BasicComponentsAndCntrlSchemes.VSIO_for_GFM
-    VS(
+  BasicComponentsAndCntrlSchemes.VSIOforGFM VS(
     S_b=S_b,
     fn=fn,
     P_0=P_0,
@@ -15,8 +14,7 @@ model REGFM_A1_incl_Limiters
     M_b=M_b,
     R_a=R_a,
     X_d=X_d) annotation (Placement(transformation(extent={{20,-20},{60,20}})));
-  LimitersAndCntrlSchemes.P_f_droop_scheme
-    pfdroopcntrl(
+  LimitersAndCntrlSchemes.PfdrpControlScheme pfdroopcntrl(
     f0=f0,
     mp=mp,
     Tr=Tr,
@@ -31,7 +29,7 @@ model REGFM_A1_incl_Limiters
         extent={{-8,-8},{8,8}},
         rotation=180,
         origin={12,-86})));
-  LimitersAndCntrlSchemes.Q_v_droop_scheme
+  LimitersAndCntrlSchemes.QVdrpCntrlScheme
     q_v_droop_scheme(
     Tr=qTr,
     EMax=EMax,
@@ -372,4 +370,4 @@ equation
           extent={{-60,-50},{60,-90}},
           textColor={238,46,47},
           textString="Plim / Qlim")}));
-end REGFM_A1_incl_Limiters;
+end REGFMA1wPQLimiters;
