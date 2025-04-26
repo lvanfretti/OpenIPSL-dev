@@ -15,7 +15,7 @@ model CombiningComponents
     annotation (Placement(transformation(extent={{-340,0},{-320,20}})));
   BasicComponentsAndCntrlSchemes.VSIOforGFM VS(fn=60, M_b=100)
     annotation (Placement(transformation(extent={{-102,-20},{-62,20}})));
-  BasicComponentsAndCntrlSchemes.PFdrpCntrlSchemeBase basic_dROOP(
+  BasicComponentsAndCntrlSchemes.PFdrpScheme basic_dROOP(
     f0=60,
     mp=0.01,
     Tr=0.1) annotation (Placement(transformation(extent={{-260,-38},{-220,2}})));
@@ -38,7 +38,7 @@ model CombiningComponents
     annotation (Placement(transformation(extent={{-340,62},{-320,82}})));
   Modelica.Blocks.Math.Add add
     annotation (Placement(transformation(extent={{-300,82},{-280,102}})));
-  BasicComponentsAndCntrlSchemes.QVdrpCntrlSchemeBase q_v_droop_scheme(
+  BasicComponentsAndCntrlSchemes.QVdrpCntrlScheme q_v_droop_scheme(
     QVFlag_val_k=true,
     VFlag_val_k=true,
     mq=0.01)
