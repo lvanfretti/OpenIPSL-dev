@@ -1,6 +1,8 @@
 LPFilter
 PFdrp
-PFdrpCntrlSchemeNoLimiters
+PFdrpCntrlSchemeBase
+PFdrpScheme
 QVdrp
-QVdrpCntrlSchemeNoLims
+QVdrpCntrlSchemeBase
+QVdrpCntrlScheme
 VSIOforGFM

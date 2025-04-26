@@ -1,9 +1,7 @@
 within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.LimitersAndCntrlSchemes;
-model PfdrpControlScheme "P-f droop control scheme with limiter input"
+model PfdrpControlSchemePLim "P-f droop control scheme with limiter input"
   extends
-    OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes.PFdrpCntrlSchemeNoLimiters
-                                                                                       (break
-      Plimsig);
+    OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes.PFdrpCntrlSchemeBase;
   OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.LimitersAndCntrlSchemes.Plimiter plimiter(
     Pmax=Pmax,
     Pmin=Pmin,
@@ -44,4 +42,4 @@ equation
           textColor={28,108,200},
           textString="Plim in")}), Diagram(coordinateSystem(
           preserveAspectRatio=false)));
-end PfdrpControlScheme;
+end PfdrpControlSchemePLim;
