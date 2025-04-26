@@ -1,9 +1,9 @@
-within OpenIPSL.Electrical.GFCs.GFMs;
-model REGFM_A1_Light
+within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1;
+model REGFMA1Light
   "Grid Following Converter with droop type REGFM_A1 \"light\" (No Limiters)"
   import Modelica;
   outer OpenIPSL.Electrical.SystemBase SysData;
-  BasicComponentsAndCntrlSchemes.VSIO_for_GFM VS(
+  BasicComponentsAndCntrlSchemes.VSIOforGFM VS(
     fn=fn,
     M_b=M_b,
     R_a=R_a,
@@ -14,7 +14,7 @@ model REGFM_A1_Light
     v_0=v_0,
     angle_0=angle_0)
     annotation (Placement(transformation(extent={{20,-20},{60,20}})));
-  BasicComponentsAndCntrlSchemes.pf_droop_scheme_nolims pfdroopcntrl(
+  BasicComponentsAndCntrlSchemes.PFdrpCntrlSchemeNoLimiters pfdroopcntrl(
     f0=f0,
     mp=mp,
     Tr=Tr) annotation (Placement(transformation(extent={{-40,-60},{0,-20}})));
@@ -24,7 +24,7 @@ model REGFM_A1_Light
         extent={{-8,-8},{8,8}},
         rotation=180,
         origin={12,-86})));
-  BasicComponentsAndCntrlSchemes.qv_droop_scheme_nolims q_v_droop_scheme(
+  BasicComponentsAndCntrlSchemes.QVdrpCntrlSchemeNoLims q_v_droop_scheme(
     Tr=qTr,
     EMax=EMax,
     EMin=EMin,
@@ -331,4 +331,4 @@ equation
           extent={{-60,-50},{60,-90}},
           textColor={28,108,200},
           textString="No P&Q Lims")}));
-end REGFM_A1_Light;
+end REGFMA1Light;
