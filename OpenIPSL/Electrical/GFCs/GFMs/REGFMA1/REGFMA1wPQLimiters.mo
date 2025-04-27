@@ -4,7 +4,7 @@ model REGFMA1wPQLimiters
   import Modelica;
   outer OpenIPSL.Electrical.SystemBase SysData;
 
-  BasicComponentsAndCntrlSchemes.VSIOforGFM VS(
+  VoltageSources.VSIOforGFM VS(
     S_b=S_b,
     fn=fn,
     P_0=P_0,
@@ -368,5 +368,10 @@ equation
           fillPattern=FillPattern.Solid), Text(
           extent={{-60,-50},{60,-90}},
           textColor={238,46,47},
-          textString="Plim / Qlim")}));
+          textString="Plim / Qlim")}), Documentation(info="<html>
+This is the second variant representation of the REGFM_A1 model.
+It includes both P-f and Q-v droop control schemes, and limiters for the active and reactive power. 
+Differently from <a href=\"modelica://OpenIPSL.UsersGuide.References\">[Du2021]</a>, it does not include fault current limiter functionalities. </p>
+
+</html>"));
 end REGFMA1wPQLimiters;

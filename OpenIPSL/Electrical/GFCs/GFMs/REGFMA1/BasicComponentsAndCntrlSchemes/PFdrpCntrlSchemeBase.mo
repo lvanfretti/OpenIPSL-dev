@@ -41,7 +41,7 @@ partial model PFdrpCntrlSchemeBase
         rotation=90,
         origin={-80,-220})));
 
-  parameter Real f0=SysData.fn "Synchronous frequency, f0 = 60 Hz"
+  parameter Real f0=SysData.fn "Synchronous frequency, f0 = 50 or 60 Hz"
     annotation (Dialog(group="P-f droop controller parameters"));
   parameter Real mp=0.005 "P-f droop gain. Normal range: 0.005 - 0.05 pu."
     annotation (Dialog(group="P-f droop controller parameters"));
@@ -78,10 +78,17 @@ equation
           lineThickness=1), Text(
           extent={{-100,102},{100,0}},
           textColor={28,108,200},
-          textString="P-f Drp"),
-                            Text(
-          extent={{-100,-2},{100,-104}},
-          textColor={238,46,47},
-          textString="No Plims")}),                              Diagram(
-        coordinateSystem(preserveAspectRatio=false, extent={{-200,-200},{200,200}})));
+          textString="P-f Drp")}),                               Diagram(
+        coordinateSystem(                           extent={{-200,-200},{200,200}},
+          grid={1,1}), graphics={Polygon(
+          points={{-8,-31},{-13,-51},{-3,-51},{-8,-31}},
+          lineColor={238,46,47},
+          fillColor={255,49,52},
+          fillPattern=FillPattern.Solid,
+          lineThickness=1)}),
+    Documentation(info="<html>
+This is a partial model (or base model) that is extended to implement the P-f droop scheme variants.
+It contains the basic droop function and the active power measurement filter. 
+A red triangle indicates the input for the signal of the active power limiters.
+</html>"));
 end PFdrpCntrlSchemeBase;

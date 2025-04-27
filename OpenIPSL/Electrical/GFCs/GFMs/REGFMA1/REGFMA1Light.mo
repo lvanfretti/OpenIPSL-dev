@@ -3,7 +3,7 @@ model REGFMA1Light
   "Grid Following Converter with droop type REGFM_A1 \"light\" (No Limiters)"
   import Modelica;
   outer OpenIPSL.Electrical.SystemBase SysData;
-  BasicComponentsAndCntrlSchemes.VSIOforGFM VS(
+  VoltageSources.VSIOforGFM VS(
     fn=fn,
     M_b=M_b,
     R_a=R_a,
@@ -186,8 +186,8 @@ equation
     annotation (Line(points={{-63,0},{-59.6,0}},     color={0,0,127}));
   connect(gain2Q0pu.y,q_v_droop_scheme. Qout0) annotation (Line(points={{-41.2,0},
           {-28,0},{-28,38.2}},               color={0,0,127}));
-  connect(sig_E0.y,q_v_droop_scheme. Emag0) annotation (Line(points={{-12,15},{-12,
-          38.2}},                          color={0,0,127}));
+  connect(sig_E0.y,q_v_droop_scheme. Emag0) annotation (Line(points={{-12,15},{
+          -12,38.2}},                      color={0,0,127}));
   connect(sig_Qmeas.y,q_v_droop_scheme. Qmeas) annotation (Line(points={{-63,30},
           {-63,43.6},{-42,43.6}},            color={0,0,127}));
   connect(sig_Vmeas.y,q_v_droop_scheme. Vmeas) annotation (Line(points={{-59,80},
@@ -202,8 +202,8 @@ equation
     annotation (Line(points={{108.5,0.5},{106,0},{62,0}}, color={0,0,0}));
   connect(Pref, pfdroopcntrl.Pref) annotation (Line(points={{-116,-60},{-96,-60},
           {-96,-32},{-42,-32}}, color={0,0,127}));
-  connect(Vref, q_v_droop_scheme.Vref) annotation (Line(points={{-116,60},{-84,60},
-          {-84,67},{-42,67}},       color={0,0,127}));
+  connect(Vref, q_v_droop_scheme.Vref) annotation (Line(points={{-116,60},{-84,
+          60},{-84,67},{-42,67}},   color={0,0,127}));
   connect(sigPmeas.y,P_meas)
     annotation (Line(points={{81,90},{110,90}},     color={0,0,127}));
   connect(sigQmeas.y,Q_meas)
@@ -330,5 +330,9 @@ equation
           fillPattern=FillPattern.Solid), Text(
           extent={{-60,-50},{60,-90}},
           textColor={28,108,200},
-          textString="No P&Q Lims")}));
+          textString="No P&Q Lims")}), Documentation(info="<html>
+This is the simplest representation of the REGFM_A1 model.
+It includes both P-f and Q-v droop control schemes. Differently from <a href=\"modelica://OpenIPSL.UsersGuide.References\">[Du2021]</a>, it does not include limiters for the active and reactive power, and fault current limiter functionalities. </p>
+
+</html>"));
 end REGFMA1Light;

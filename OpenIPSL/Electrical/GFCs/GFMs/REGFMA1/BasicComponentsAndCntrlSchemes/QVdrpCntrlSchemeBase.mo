@@ -107,6 +107,9 @@ protected
   parameter Real E0(fixed=false);
   parameter Real V0(fixed=false);
 
+public
+  Modelica.Blocks.Math.Add domega(k2=-1)
+    annotation (Placement(transformation(extent={{46,-64},{58,-52}})));
 initial equation
     Q0 = Qout0 "Assign the value coming from the voltage source to the inital value of PQ0 used by the filter block";
     E0 = Emag0 "Assign the value of the internal voltage magnitude of the voltage source";
@@ -158,10 +161,6 @@ equation
         extent={{-200,-200},{200,200}},
         initialScale=0.5), graphics={
                             Text(
-          extent={{-98,-4},{102,-106}},
-          textColor={238,46,47},
-          textString="No Qlims"),
-                            Text(
           extent={{-98,98},{102,-4}},
           textColor={28,108,200},
           textString="Q-v Drp"),
@@ -195,5 +194,17 @@ Set --> PI with Limiter"),
           textColor={28,108,200},
           textString="u2 = false
 VFlag = 0 
-Set --> E Limited")}));
+Set --> E Limited"),
+        Polygon(
+          points={{-30,-57},{-35,-77},{-25,-77},{-30,-57}},
+          lineColor={238,46,47},
+          fillColor={255,49,52},
+          fillPattern=FillPattern.Solid,
+          lineThickness=1)}),
+    Documentation(info="<html>
+This is a partial model (or base model) that is extended to implement the Q-f droop scheme variants.
+It contains the basic droop function and the reactive power measurement filter. 
+A red triangle indicates the input for the signal of the reactive power limiter.
+
+</html>"));
 end QVdrpCntrlSchemeBase;
