@@ -65,5 +65,14 @@ Set --> PI with Limiter"),
           textColor={28,108,200},
           textString="QVFlag = 0 
 Set --> Qref = Qinv")}),
-                   experiment(StopTime=10));
+                   experiment(StopTime=10),
+    Documentation(info="<html>
+Tests the Q-v droop control scheme without limiters. Applies the switches with:
+<code>
+QVFLAG = 0 </code> and
+<code>
+VFLAG =1
+</code>
+
+</html>"));
 end QVqvflag0vflag1;

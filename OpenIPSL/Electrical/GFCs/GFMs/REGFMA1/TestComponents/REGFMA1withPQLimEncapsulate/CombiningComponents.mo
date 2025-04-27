@@ -159,5 +159,9 @@ equation
       __Dymola_NumberOfIntervals=5000,
       __Dymola_Algorithm="Dassl"),                                 Diagram(
         coordinateSystem(extent={{-400,-200},{100,200}}, initialScale=0.5)),
-    Icon(coordinateSystem(initialScale=0.5)));
+    Icon(coordinateSystem(initialScale=0.5)),
+    Documentation(info="<html>
+Illustrates how to combine the different components in this sub-package to create the 
+<code>REGFMA1PQLimiters</code> model.
+</html>"));
 end CombiningComponents;

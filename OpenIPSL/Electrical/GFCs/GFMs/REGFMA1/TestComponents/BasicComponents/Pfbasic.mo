@@ -50,5 +50,10 @@ equation
     annotation (Line(points={{22,0},{110,0}}, color={0,0,127}));
   connect(pfbasic.omega_droop, omega_droop) annotation (Line(points={{22,-12},{
           94,-12},{94,-20},{110,-20}}, color={0,0,127}));
-  annotation (experiment(StopTime=2));
+  annotation (experiment(StopTime=2), Documentation(info="<html>
+Tests the P-f droop model components that are used to build the control scheme base class.
+Simulate and plot the input signal, <code> step.y</code>, and the output signals, <code>delta_droop</code> and <code> omega_droop</code>.
+
+
+</html>"));
 end Pfbasic;

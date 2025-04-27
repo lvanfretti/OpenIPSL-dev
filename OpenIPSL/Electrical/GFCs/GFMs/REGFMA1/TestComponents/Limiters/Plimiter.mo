@@ -40,5 +40,16 @@ equation
     annotation (Line(points={{-39,-40},{-22,-40}}, color={0,0,127}));
   connect(Plim_lower.Plim_out, Plim_out_lower)
     annotation (Line(points={{21,-40},{110,-40}}, color={0,0,127}));
-  annotation (experiment(StopTime=10));
+  annotation (experiment(StopTime=10), Documentation(info="<html>
+<p>
+This model uses two instances of the active power limiter model to test limit activation.
+Simulate and plot the input and output signals.
+</p>
+<p>
+For the upper limit, plot <code>Pfilt_upper</code> and <code>Plim_out_upper</code>.
+</p>
+<p>
+For the lower limit, plot <code>Pfilt_lower</code> and <code>Plim_out_lower</code>.
+</p>
+</html>"));
 end Plimiter;

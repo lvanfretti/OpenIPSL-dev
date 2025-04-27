@@ -82,5 +82,14 @@ Set --> PI with Limiter"),
           textColor={28,108,200},
           textString="u2 = false
 VFlag = 0 
-Set --> E Limited")}), experiment(StopTime=10));
+Set --> E Limited")}), experiment(StopTime=10),
+    Documentation(info="<html>
+Tests the Q-v droop control scheme without limiters. Applies the switches with:
+<code>
+QVFLAG = 1 </code> and
+<code>
+VFLAG =1
+</code>
+
+</html>"));
 end QVqvflag1vflag1;
