@@ -369,6 +369,7 @@ equation
           extent={{-60,-50},{60,-90}},
           textColor={238,46,47},
           textString="Plim / Qlim")}), Documentation(info="<html>
+<p>
 This is the second variant representation of the REGFM_A1 model.
 It includes both P-f and Q-v droop control schemes, and limiters for the active and reactive power. 
 Differently from <a href=\"modelica://OpenIPSL.UsersGuide.References\">[Du2021]</a>, it does not include fault current limiter functionalities. </p>

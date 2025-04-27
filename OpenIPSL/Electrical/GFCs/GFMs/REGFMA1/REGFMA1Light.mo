@@ -331,6 +331,7 @@ equation
           extent={{-60,-50},{60,-90}},
           textColor={28,108,200},
           textString="No P&Q Lims")}), Documentation(info="<html>
+<p>
 This is the simplest representation of the REGFM_A1 model.
 It includes both P-f and Q-v droop control schemes. Differently from <a href=\"modelica://OpenIPSL.UsersGuide.References\">[Du2021]</a>, it does not include limiters for the active and reactive power, and fault current limiter functionalities. </p>
 

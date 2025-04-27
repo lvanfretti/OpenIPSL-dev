@@ -1,7 +1,6 @@
 within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.LimitersAndCntrlSchemes;
 model PfdrpControlSchemePLim "P-f droop control scheme with limiter input"
-  extends
-    OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes.Base.PFdrpCntrlSchemeBase;
+  extends OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes.Base.PFdrpCntrlSchemeBase;
   OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.LimitersAndCntrlSchemes.Plimiter plimiter(
     Pmax=Pmax,
     Pmin=Pmin,
