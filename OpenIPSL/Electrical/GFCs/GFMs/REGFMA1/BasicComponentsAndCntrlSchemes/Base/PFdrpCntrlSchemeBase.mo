@@ -1,4 +1,4 @@
-within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes;
+within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes.Base;
 partial model PFdrpCntrlSchemeBase
   "Partial / Base model of the P-f droop control scheme base model to use with variants with and without P limiters"
   import Modelica;

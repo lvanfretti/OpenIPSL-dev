@@ -1,7 +1,7 @@
 within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.LimitersAndCntrlSchemes;
 model QVdrpCntrlSchemeQLim "Q-v droop control scheme with Q limiter input"
   extends
-    OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes.QVdrpCntrlSchemeBase;
+    OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes.Base.QVdrpCntrlSchemeBase;
   Qlimiter
     qlimiter(
     Qmax=Qmax,

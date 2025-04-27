@@ -1,4 +1,4 @@
-within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes;
+within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes.Base;
 partial model QVdrpCntrlSchemeBase
   "Partial/Base model of the Q-v droop control scheme without Qmax/Qmin limits"
   import Modelica;

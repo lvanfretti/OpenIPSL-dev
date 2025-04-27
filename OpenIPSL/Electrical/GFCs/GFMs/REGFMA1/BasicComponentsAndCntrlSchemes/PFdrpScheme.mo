@@ -1,6 +1,6 @@
 within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes;
 model PFdrpScheme "P-f droop control scheme model without P limiters"
-  extends PFdrpCntrlSchemeBase;
+  extends Base.PFdrpCntrlSchemeBase;
   Modelica.Blocks.Sources.Constant Plimsig(k=0) "Active power limiter signal"
     annotation (Placement(transformation(extent={{-60,-60},{-40,-40}})));
 equation
