@@ -107,9 +107,6 @@ protected
   parameter Real E0(fixed=false);
   parameter Real V0(fixed=false);
 
-public
-  Modelica.Blocks.Math.Add domega(k2=-1)
-    annotation (Placement(transformation(extent={{46,-64},{58,-52}})));
 initial equation
     Q0 = Qout0 "Assign the value coming from the voltage source to the inital value of PQ0 used by the filter block";
     E0 = Emag0 "Assign the value of the internal voltage magnitude of the voltage source";
