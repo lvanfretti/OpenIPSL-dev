@@ -41,5 +41,9 @@ equation
                                               color={0,0,127}));
   connect(p_f_droop_scheme_nolims.omega_droop, omega_droop) annotation
     (Line(points={{21,-8},{94,-8},{94,-12},{110,-12}}, color={0,0,127}));
-  annotation (experiment(StopTime=2));
+  annotation (experiment(StopTime=2), Documentation(info="<html>
+Tests the P-f droop control scheme without limiters.
+Simulate and plot the input signal, <code> step.y</code>, and the output signals, <code>delta_droop</code> and <code> omega_droop</code>.
+
+</html>"));
 end PFdrpScheme;

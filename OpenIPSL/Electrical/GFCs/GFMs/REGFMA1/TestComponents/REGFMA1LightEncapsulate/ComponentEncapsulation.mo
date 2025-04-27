@@ -54,5 +54,18 @@ equation
       StopTime=60,
       __Dymola_NumberOfIntervals=5000,
       __Dymola_Algorithm="Dassl"),                                 Diagram(
-        coordinateSystem(extent={{-240,-100},{100,100}}, initialScale=0.5)));
+        coordinateSystem(extent={{-240,-100},{100,100}}, initialScale=0.5)),
+    Documentation(info="<html>
+<p>
+Illustrates how to use the 
+<code>REGFMA1light</code> model.
+</p>
+<p>
+Simulate and plot the <code>pwLine.P12</code> and <code>pwLine.Q12</code>, which represent the active and reactive powers being injected, and the terminal voltage <code>GFC.V</code>.
+</p>
+
+<p>
+The active power reference is ramped-down at 20 sec., while the voltage magnitude reference is ramped-up at 40 and 46 sec.
+</p>
+</html>"));
 end ComponentEncapsulation;

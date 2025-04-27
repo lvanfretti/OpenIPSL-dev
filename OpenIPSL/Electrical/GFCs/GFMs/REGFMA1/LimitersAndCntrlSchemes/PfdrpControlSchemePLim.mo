@@ -41,5 +41,15 @@ equation
           extent={{-98,-18},{98,-80}},
           textColor={28,108,200},
           textString="Plim in")}), Diagram(coordinateSystem(
-          preserveAspectRatio=false)));
+          preserveAspectRatio=false)),
+    Documentation(info="<html>
+<p>
+This model extends the base control scheme and adds the active power limiter.
+</p>
+
+<p>
+Note that the constant block <code> sig_P0</code> provides the value of the active power  <code>P0</code> for initialization of the <code>plimiter</code> block.
+</p>
+
+</html>"));
 end PfdrpControlSchemePLim;

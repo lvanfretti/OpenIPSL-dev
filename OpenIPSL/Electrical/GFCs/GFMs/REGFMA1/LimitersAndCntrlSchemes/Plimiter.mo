@@ -122,5 +122,8 @@ Limiters"),
           textColor={28,108,200},
           textString="%name")}),
                           Diagram(coordinateSystem(preserveAspectRatio=false,
-          extent={{-200,-200},{200,200}})));
+          extent={{-200,-200},{200,200}})),
+    Documentation(info="<html>
+This model implements the active power limiter. The upper branch limits the the maximum power, while the lower branch limits the minimum power.
+</html>"));
 end Plimiter;

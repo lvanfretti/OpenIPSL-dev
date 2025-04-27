@@ -45,5 +45,14 @@ equation
           fillPattern=FillPattern.Solid), Text(
           extent={{-98,-20},{98,-82}},
           textColor={28,108,200},
-          textString="Qlim in")}));
+          textString="Qlim in")}), Documentation(info="<html>
+<p>
+This model extends the base control scheme and adds the reactive power limiter.
+</p>
+
+<p>
+Note that the constant block <code> sig_Q0</code> provides the value of the reactive power <code>Q0</code> for initialization of the <code>qlimiter</code> block.
+</p>
+
+</html>"));
 end QVdrpCntrlSchemeQLim;

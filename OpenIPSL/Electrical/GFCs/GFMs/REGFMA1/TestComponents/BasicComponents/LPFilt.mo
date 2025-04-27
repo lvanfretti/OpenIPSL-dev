@@ -8,5 +8,7 @@ model LPFilt "Test LPFilter"
 equation
   connect(step.y, lowPassFilter.u)
     annotation (Line(points={{-38,0},{-24,0}}, color={0,0,127}));
-  annotation (experiment(StopTime=2));
+  annotation (experiment(StopTime=2), Documentation(info="<html>
+Tests the low-pass filter model. Simulate and compare the input and output signals <code>step.y</code> and <code>lowPassFilter.y</code>.
+</html>"));
 end LPFilt;
