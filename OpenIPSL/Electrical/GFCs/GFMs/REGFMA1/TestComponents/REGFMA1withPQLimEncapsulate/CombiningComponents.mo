@@ -7,7 +7,7 @@ model CombiningComponents
       X=1e-3,
       t1=62.0,
       t2=62.15));
-  BasicComponentsAndCntrlSchemes.VSIOforGFM VS(fn=60, M_b=100)
+  VoltageSources.VSIOforGFM VS(fn=60, M_b=100)
     annotation (Placement(transformation(extent={{-102,-18},{-62,22}})));
   LimitersAndCntrlSchemes.PfdrpControlSchemePLim basic_dROOP(
     f0=60,

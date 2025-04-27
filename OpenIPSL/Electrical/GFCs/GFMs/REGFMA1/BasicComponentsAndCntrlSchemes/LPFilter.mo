@@ -30,5 +30,11 @@ equation
           extent={{-100,162},{100,102}},
           textColor={28,108,200},
           textString="%name")}),                                 Diagram(
-        coordinateSystem(preserveAspectRatio=false)),preferredView="diagram");
+        coordinateSystem(preserveAspectRatio=false)),preferredView="diagram",
+    Documentation(info="<html>
+Low-pass filter model built using the <code>Modelica.Blocks.Continuous.TransferFunction</code> block from the MSL.
+
+The numerator is set to <code>b=1</code>. The denominator is set to <code>{Tr,1}</code> where <code>Tr</code> is the time constant of the filter.
+The model is set to initialize with the option \"Initial Output\", the value of the initial outpu is <code>y0val</code>, which is propagted. This is later set by the P-f or Q-v control schemes to match the value of the active or reactive power that has been determined by the voltage source.
+</html>"));
 end LPFilter;

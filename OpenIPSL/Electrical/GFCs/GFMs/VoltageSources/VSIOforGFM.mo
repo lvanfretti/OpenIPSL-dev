@@ -1,4 +1,4 @@
-within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes;
+within OpenIPSL.Electrical.GFCs.GFMs.VoltageSources;
 model VSIOforGFM
   "Extends the VS Droop model with additional outputs to interface with the GFM converter"
   import Modelica;
@@ -14,7 +14,7 @@ model VSIOforGFM
     R_a=R_a,
     X_d=X_d,
     useEphasorInternalAsInput=false)
-             annotation (Placement(transformation(extent={{-20,-20},{20,20}})));
+    annotation (Placement(transformation(extent={{-20,-20},{20,20}})));
   Interfaces.PwPin p
     annotation (Placement(transformation(extent={{100,-10},{120,10}})));
   Modelica.Blocks.Sources.RealExpression Pmeas(y=VS.P) "Active power"
@@ -205,5 +205,12 @@ equation
           points={{-98,-40},{-58,-40}},
           color={28,108,200},
           thickness=1)}),                                        Diagram(
-        coordinateSystem(preserveAspectRatio=false)));
+        coordinateSystem(preserveAspectRatio=false)),
+    Documentation(info="<html>
+This model extends the voltage source with an impedance model <code>OpenIPSL.Electrical.Sources.SourceBehindImpedance.VoltageSources.VSourceIO</code>.
+It expands the afromentioned model to provide additional outputs, which are later used as measurements or for initialization by the different control blocks.
+<p>
+The 
+</p>
+</html>"));
 end VSIOforGFM;

@@ -54,8 +54,6 @@ model PFdrp "P-f droop controller"
     initType=Modelica.Blocks.Types.Init.InitialOutput,
     y_start=delta0)
     annotation (Placement(transformation(extent={{52,-6},{64,6}})));
-  Modelica.Blocks.Math.WrapAngle wrapAngle
-    annotation (Placement(transformation(extent={{72,-10},{92,10}})));
 protected
   parameter Real delta0(fixed=false);
 initial equation
@@ -85,10 +83,8 @@ equation
   connect(integrator.u, w0Gain.y)
     annotation (Line(points={{50.8,0},{39,0}},
                                              color={0,0,127}));
-  connect(integrator.y, wrapAngle.u)
-    annotation (Line(points={{64.6,0},{70,0}}, color={0,0,127}));
-  connect(wrapAngle.y, delta_droop)
-    annotation (Line(points={{93,0},{110,0}}, color={0,0,127}));
+  connect(integrator.y, delta_droop)
+    annotation (Line(points={{64.6,0},{110,0}}, color={0,0,127}));
   annotation (Icon(coordinateSystem(preserveAspectRatio=false), graphics={
         Rectangle(
           extent={{-100,100},{100,-100}},
@@ -102,5 +98,18 @@ equation
           extent={{-100,62},{100,-40}},
           textColor={28,108,200},
           textString="P-f Drp")}),                               Diagram(
-        coordinateSystem(preserveAspectRatio=false)),preferredView="diagram");
+        coordinateSystem(preserveAspectRatio=false)),preferredView="diagram",
+    Documentation(info="<html>
+<p>This model implements the basic droop fundtion of the P-f control scheme.</p> 
+
+<p>
+The gain block \"mpGain\" has a parameter <code>k=mp</code> that is used to set the droop value. The reminder of the model determines the angle and the frequency of the converter.
+</p>
+
+<p>
+The initial angle for the integrator, <code>delta0</code>, is set as a parameter with <code>fixed=false</code> that is propagated. 
+This parameter is set in the P-f droop control scheme base model using the value computed by the voltage source.
+In this model, an <code>initial equation</code> sets the initial value of the angle, <code>delta0</code>, through an initial equation that assigns it the value computed by the voltage source.
+</p>
+</html>"));
 end PFdrp;
