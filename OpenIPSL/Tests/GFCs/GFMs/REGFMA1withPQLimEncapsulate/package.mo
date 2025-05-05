@@ -1,4 +1,4 @@
-within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.TestComponents;
+within OpenIPSL.Tests.GFCs.GFMs;
 package REGFMA1withPQLimEncapsulate
   "Tests the REGF model with limiters, both unpackaged and packaged variants"
   extends Modelica.Icons.ExamplesPackage;

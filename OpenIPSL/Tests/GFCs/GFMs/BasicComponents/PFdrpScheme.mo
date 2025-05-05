@@ -1,4 +1,4 @@
-within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.TestComponents.BasicComponents;
+within OpenIPSL.Tests.GFCs.GFMs.BasicComponents;
 model PFdrpScheme "Test"
   extends Modelica.Icons.Example;
   Modelica.Blocks.Sources.Step step(
@@ -23,7 +23,7 @@ model PFdrpScheme "Test"
         extent={{-10,-10},{10,10}},
         rotation=90,
         origin={30,-70})));
-  BasicComponentsAndCntrlSchemes.PFdrpScheme p_f_droop_scheme_nolims
+  Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes.PFdrpScheme p_f_droop_scheme_nolims
     annotation (Placement(transformation(extent={{-20,-20},{20,20}})));
 equation
   connect(Pref.y, p_f_droop_scheme_nolims.Pref) annotation (Line(points={{-79,10},

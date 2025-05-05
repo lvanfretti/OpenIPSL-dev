@@ -1,4 +1,4 @@
-within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.TestComponents;
+within OpenIPSL.Tests.GFCs.GFMs;
 package BasicComponents
   "Tests basic components and control schemes individually"
   extends Modelica.Icons.ExamplesPackage;
