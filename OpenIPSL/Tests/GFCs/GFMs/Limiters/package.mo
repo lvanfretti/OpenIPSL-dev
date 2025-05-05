@@ -1,4 +1,4 @@
-within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.TestComponents;
+within OpenIPSL.Tests.GFCs.GFMs;
 package Limiters "Models to test the limiters"
   extends Modelica.Icons.ExamplesPackage;
   annotation (Documentation(info="<html>

@@ -1,4 +1,4 @@
-within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.TestComponents.REGFMA1LightEncapsulate;
+within OpenIPSL.Tests.GFCs.GFMs.REGFMA1LightEncapsulate;
 model ComponentEncapsulation "Test the packaged REGF_A1_Light model"
   extends Modelica.Icons.Example;
   extends OpenIPSL.Tests.BaseClasses.SMIB(SysData(fn=60), pwFault(
@@ -26,7 +26,7 @@ model ComponentEncapsulation "Test the packaged REGF_A1_Light model"
     annotation (Placement(transformation(extent={{-220,0},{-200,20}})));
   Modelica.Blocks.Math.Add add
     annotation (Placement(transformation(extent={{-180,20},{-160,40}})));
-  REGFMA1Light GFC(
+  Electrical.GFCs.GFMs.REGFMA1.REGFMA1Light GFC(
     M_b=5,
     R_a=1e-12,
     X_d=0.001,

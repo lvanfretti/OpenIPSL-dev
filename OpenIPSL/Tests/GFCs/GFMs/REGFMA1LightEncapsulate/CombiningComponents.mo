@@ -1,4 +1,4 @@
-within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.TestComponents.REGFMA1LightEncapsulate;
+within OpenIPSL.Tests.GFCs.GFMs.REGFMA1LightEncapsulate;
 model CombiningComponents
   "Test the three components of the REGF_A1_Light model in a power system"
   extends Modelica.Icons.Example;
@@ -13,12 +13,13 @@ model CombiningComponents
     offset=0.4,
     startTime=20)
     annotation (Placement(transformation(extent={{-320,-50},{-300,-30}})));
-  VoltageSources.VSIOforGFM                 VS(fn=60, M_b=100)
+  Electrical.GFCs.GFMs.VoltageSources.VSIOforGFM VS(fn=60, M_b=100)
     annotation (Placement(transformation(extent={{-102,-20},{-62,20}})));
-  BasicComponentsAndCntrlSchemes.PFdrpScheme basic_dROOP(
+  Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes.PFdrpScheme basic_dROOP(
     f0=60,
     mp=0.01,
-    Tr=0.1) annotation (Placement(transformation(extent={{-260,-80},{-220,-40}})));
+    Tr=0.1)
+    annotation (Placement(transformation(extent={{-260,-80},{-220,-40}})));
   Modelica.Blocks.Math.Gain gain2P0pu(k=1/100) annotation (Placement(
         transformation(
         extent={{-8,-8},{8,8}},
@@ -38,7 +39,7 @@ model CombiningComponents
     annotation (Placement(transformation(extent={{-360,20},{-340,40}})));
   Modelica.Blocks.Math.Add add
     annotation (Placement(transformation(extent={{-320,40},{-300,60}})));
-  BasicComponentsAndCntrlSchemes.QVdrpCntrlScheme q_v_droop_scheme(
+  Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes.QVdrpCntrlScheme q_v_droop_scheme(
     QVFlag_val_k=true,
     VFlag_val_k=true,
     mq=0.01)
