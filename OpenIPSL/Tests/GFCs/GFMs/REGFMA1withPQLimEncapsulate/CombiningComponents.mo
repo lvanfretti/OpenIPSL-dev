@@ -9,7 +9,8 @@ model CombiningComponents
       t2=62.15));
   Electrical.GFCs.GFMs.VoltageSources.VSIOforGFM VS(fn=60, M_b=100)
     annotation (Placement(transformation(extent={{-102,-18},{-62,22}})));
-  Electrical.GFCs.GFMs.REGFMA1.LimitersAndCntrlSchemes.PfdrpControlSchemePLim basic_dROOP(
+  Electrical.GFCs.GFMs.REGFMA1.PQLimitersAndCntrlSchemes.PfdrpControlSchemePLim
+    basic_dROOP(
     f0=60,
     mp=0.01,
     Tr=0.1) annotation (Placement(transformation(extent={{-240,-40},{-200,0}})));
@@ -32,7 +33,8 @@ model CombiningComponents
     annotation (Placement(transformation(extent={{-340,120},{-320,140}})));
   Modelica.Blocks.Math.Add add
     annotation (Placement(transformation(extent={{-300,140},{-280,160}})));
-  Electrical.GFCs.GFMs.REGFMA1.LimitersAndCntrlSchemes.QVdrpCntrlSchemeQLim q_v_droop_scheme(
+  Electrical.GFCs.GFMs.REGFMA1.PQLimitersAndCntrlSchemes.QVdrpCntrlSchemeQLim
+    q_v_droop_scheme(
     QVFlag_val_k=true,
     VFlag_val_k=true,
     mq=0.01)
@@ -60,13 +62,13 @@ model CombiningComponents
         extent={{-10,-10},{10,10}},
         rotation=180,
         origin={-198,174})));
-  Electrical.GFCs.GFMs.REGFMA1.LimitersAndCntrlSchemes.Plimiter plimiter
+  Electrical.GFCs.GFMs.REGFMA1.PQLimitersAndCntrlSchemes.Plimiter plimiter
     annotation (Placement(transformation(extent={{-260,-100},{-220,-140}})));
   Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes.LPFilter Pfilt
     annotation (Placement(transformation(extent={{-300,-130},{-280,-110}})));
   Modelica.Blocks.Sources.RealExpression sig_Pmeas_4pfilt(y=VS.P_meas)
     annotation (Placement(transformation(extent={{-330,-130},{-310,-110}})));
-  Electrical.GFCs.GFMs.REGFMA1.LimitersAndCntrlSchemes.Qlimiter qlimiter
+  Electrical.GFCs.GFMs.REGFMA1.PQLimitersAndCntrlSchemes.Qlimiter qlimiter
     annotation (Placement(transformation(extent={{-280,80},{-240,40}})));
   Modelica.Blocks.Sources.RealExpression sig_Qmeas_4qfilt(y=VS.Q_meas)
     annotation (Placement(transformation(extent={{-340,50},{-320,70}})));
