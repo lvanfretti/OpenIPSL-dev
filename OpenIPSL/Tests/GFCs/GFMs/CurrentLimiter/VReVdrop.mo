@@ -1,5 +1,5 @@
 within OpenIPSL.Tests.GFCs.GFMs.CurrentLimiter;
-model VRe_Vdrop "Tests the Virtual Resistor implementation"
+model VReVdrop "Tests the Virtual Resistor implementation"
   extends Modelica.Icons.Example;
   OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.CurrentLimiters.VRe virtualRe(R_a=1e-6,
       Imax=1.5)
@@ -36,4 +36,4 @@ equation
   connect(virtualRe.R_e, R_e) annotation (Line(points={{0,22},{0,30},{96,
           30},{96,0},{110,0}}, color={0,0,127}));
   annotation (experiment(StopTime=10, __Dymola_Algorithm="Dassl"));
-end VRe_Vdrop;
+end VReVdrop;
