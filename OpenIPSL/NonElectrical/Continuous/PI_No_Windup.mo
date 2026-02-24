@@ -6,7 +6,7 @@ model PI_No_Windup "PI controller with no wind-up"
   parameter Types.PerUnit V_RMAX "Maximum regulator output";
   parameter Types.PerUnit V_RMIN "Minimum regulator output";
   parameter Types.PerUnit y_start_int "Initial output value";
-  Modelica.Blocks.Continuous.Integrator    integral(
+  Modelica.Blocks.Continuous.Integrator integral(
     k=K_I,
     use_reset=false,
     initType=Modelica.Blocks.Types.Init.InitialOutput,
@@ -43,13 +43,13 @@ equation
   annotation (
     Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
         graphics={Rectangle(extent={{-100,100},{100,-100}}, lineColor={28,108,
-              200}),                                                      Text(
+              200}), Text(
           extent={{0,44},{94,0}},
-          lineColor={0,0,255},
+          textColor={0,0,255},
           textString="Ki"),
                           Text(
           extent={{-64,22},{-18,-18}},
-          lineColor={0,0,255},
+          textColor={0,0,255},
           textString="Kp"),
                           Line(
           points={{24,0},{68,0}},
@@ -57,7 +57,7 @@ equation
           smooth=Smooth.Bezier,
           thickness=0.5),Text(
           extent={{20,4},{72,-44}},
-          lineColor={0,0,255},
+          textColor={0,0,255},
           textString="s"),
         Text(
           extent={{-24,18},{22,-18}},

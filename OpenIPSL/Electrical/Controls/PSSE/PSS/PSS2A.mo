@@ -96,7 +96,7 @@ equation
     Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
                                                                                     graphics={ Text(
           extent={{-40,80},{40,40}},
-          lineColor={28,108,200},
+          textColor={28,108,200},
           textString="PSS2A")}),
     Documentation(revisions="<html>
 <table cellspacing=\"1\" cellpadding=\"1\" border=\"1\">
@@ -118,5 +118,10 @@ equation
 <td><p>see <a href=\"modelica://OpenIPSL.UsersGuide.Contact\">UsersGuide.Contact</a></p></td>
 </tr>
 </table>
+</html>", info="<html>
+
+<p>This model uses an implementation of the ramp tracking filter as described in <a href=\"modelica://OpenIPSL.UsersGuide.References\">[Laera2022]</a>, which can be found under <code>OpenIPSL.NonElectrical.Continuous.RampTrackingFilter</code>.</p>
+<p>See <a href=\"modelica://OpenIPSL.UsersGuide.References\">[Laera2022]</a> for the expected behavior of this model.</p>
+
 </html>"));
 end PSS2A;

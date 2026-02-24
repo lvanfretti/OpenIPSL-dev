@@ -87,10 +87,10 @@ model Generator2
     constrainedby GUDynamicsTemplate annotation (choicesAllMatching=true);
 equation
   connect(eSDC1A.ECOMP,gENROE. ETERM) annotation (Line(points={{-48.4,-38},{96,-38},
-          {96,-6},{68,-6}},                 color={0,0,127}));
+          {96,-6},{68,-6}}, color={0,0,127}));
 
   connect(eSDC1A.EFD,gENROE. EFD) annotation (Line(points={{-83.6,-38},{-92,-38},
-          {-92,-12},{22,-12}},              color={0,0,127}));
+          {-92,-12},{22,-12}}, color={0,0,127}));
   connect(eSDC1A.EFD0,gENROE. EFD0) annotation (Line(points={{-48.4,-44.4},{32,-44.4},
           {32,-44},{92,-44},{92,-10},{68,-10}},
                                           color={0,0,127}));
@@ -99,7 +99,7 @@ equation
   connect(gENROE.PELEC, iEE2ST.V_S2) annotation (Line(points={{68,6},{90,6},{90,
           54},{-32.2,54},{-32.2,37.8}}, color={0,0,127}));
   connect(gENROE.XADIFD,eSDC1A. XADIFD) annotation (Line(points={{68,-18},{86,-18},
-          {86,-96},{-78.8,-96},{-78.8,-55.6}},                                                                             color={0,0,127}));
+          {86,-96},{-78.8,-96},{-78.8,-55.6}}, color={0,0,127}));
   connect(gENROE.p, pwPin)
     annotation (Line(points={{66,0},{110,0}}, color={0,0,255}));
   connect(minusInf.y, eSDC1A.VUEL) annotation (Line(points={{-52.6,-80},{-59.6,
@@ -118,17 +118,14 @@ equation
           {82,46},{-22,46},{-22,37.8},{-21.8,37.8}}, color={0,0,127}));
   annotation (Icon(graphics={Text(
           extent={{-93,6},{-24,-12}},
-          lineColor={0,0,255},
+          textColor={0,0,255},
           textStyle={TextStyle.Italic},
           textString=""),
           Text(extent={{-34,-32},{38,-52}},
-          lineColor={28,108,200},
-          fillColor={0,0,255},
-          fillPattern=FillPattern.Solid,
+          textColor={28,108,200},
           textString="%name"),
                          Line(points={{-60,-20},{-20,20},{20,-20},{60,20}},
-          color={28,108,200}),Ellipse(extent={{-100,-100},{100,100}}, lineColor
-            =
+          color={28,108,200}),Ellipse(extent={{-100,-100},{100,100}}, lineColor=
            {28,108,200})}),
     Documentation(info="<html>
 <p>Generation Group for the example that uses the Anderson-based data set.</p>

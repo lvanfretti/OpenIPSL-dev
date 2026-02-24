@@ -23,6 +23,15 @@ model References "References"
 </tr>
 
 <tr>
+<td>[Henningsson2019]</td>
+<td>E. Henningsson, H. Olsson and L. Vanfretti:
+        &quot;DAE Solvers for Large-Scale Hybrid Models&quot;.
+        in Proceedings of the 13th International Modelica Conference, Regensburg, Germany, March 4-6, 2019.
+         (<a href=\"https://2019.international.conference.modelica.org/proceedings/html/papers/Modelica2019paper4D1.pdf\">DOI:10.3384/ecp19157491 </a>).
+</td>
+</tr>
+
+<tr>
 <td>[IEEE1968]</td>
 <td>IEEE:
         &quot;Computer representation of excitation systems&quot;.
@@ -82,6 +91,16 @@ model References "References"
         <a href=\"https://doi.org/10.1109/IEEESTD.2016.7553421\">DOI: 10.1109/IEEESTD.2016.7553421</a>
 </td>
 </tr>
+
+<tr>
+<td>[Laera2022]</td>
+<td>
+G. Laera, L. Vanfretti, M. de Castro Fernandes, S.A. Dorado-Rojas, F. Fachini, C. Mishra, K.D. Jones and R.M. Gardner,
+    &quot;Guidelines and Use Cases for Power System Dynamics Modeling and Model Verification using Modelica&quot;,
+    American Modelica Conference 2022, October 26-28, 2022, Dallas, Texas, US. <a href=\"https://doi.org/10.3384/ECP21186146\">DOI: 10.3384/ECP21186146</a>
+</td>
+</tr>
+
 <tr>
 <td>[Milano2010]</td>
 <td>Federico Milano:
@@ -108,11 +127,36 @@ model References "References"
 </td>
 </tr>
 <tr>
+<td>[Panasetsky2016]</td>
+<td>Panasetsky, D., Osak, A., Sidorov, D., Yong, Li:
+        &quot;Simplified variable frequency induction-motor drive model for power system stability studies and control&quot;.
+        In: IFAC-PapersOnLine,
+        November 2016,
+        <a href=\"https://doi.org/10.1016/j.ifacol.2016.10.774\">DOI: https://doi.org/10.1016/j.ifacol.2016.10.774</a>
+</td>
+</tr>
+<tr>
+<td>[PES-TR 66]</td>
+<td>IEEE PES Power System Dynamic Performance Committee, and IEEE PES Task Force on Microgrid Stability Analysis and Modeling:
+        &quot;Microgrid Stability Definitions, Analysis, and Modeling&quot;.
+         In: IEEE Power & Energy Society,
+        April 2018,
+        <a href=\"https://ieeexplore.ieee.org/document/8750828\">DOI: 10.1109/TPWRS.2019.2925703</a>
+</td>
+</tr>
+<tr>
+<td>[PSSEMotor]</td>
+<td>PowerWorld:
+        &quot;Load Characteristic Models&quot;,
+        (<a href=\"https://www.powerworld.com/WebHelp/Content/TransientModels_HTML/Load%20Characteristic.htm?tocpath=Transient%20Stability%20Add-On%20(TS)%7CTransient%20Models%7CLoad%7CCharacteristic%7C_____0\">Home page</a>)
+</td>
+</tr>
+<tr>
 <td>[PSSE-AGV1]</td>
 <td>Siemens:
         &quot;PSS&reg;E Program Application Guide Volume 1&quot;,
         version 33, April 2017,
-        (<a href=\"https://new.siemens.com/global/en/products/energy/energy-automation-and-smart-grid/pss-software/pss-e.html\">Home page</a>)
+        (<a href=\"https://xcelerator.siemens.com/global/en/all-offerings/products/p/psse-version-33.html\">Home page</a>)
 </td>
 </tr>
 <tr>
@@ -120,7 +164,7 @@ model References "References"
 <td>Siemens:
         &quot;PSS&reg;E Program Application Guide Volume 2&quot;,
         version 33, April 2017,
-        (<a href=\"https://new.siemens.com/global/en/products/energy/energy-automation-and-smart-grid/pss-software/pss-e.html\">Home page</a>)
+        (<a href=\"https://xcelerator.siemens.com/global/en/all-offerings/products/p/psse-version-33.html\">Home page</a>)
 </td>
 </tr>
 <tr>
@@ -128,7 +172,7 @@ model References "References"
 <td>Siemens:
         &quot;PSS&reg;E Model Library&quot;,
         version 33, April 2017,
-        (<a href=\"https://new.siemens.com/global/en/products/energy/energy-automation-and-smart-grid/pss-software/pss-e.html\">Home page</a>)
+        (<a href=\"https://xcelerator.siemens.com/global/en/all-offerings/products/p/psse-version-33.html\">Home page</a>)
 </td>
 </tr>
 <tr>
@@ -144,24 +188,24 @@ model References "References"
 <td>[WECCBattery]</td>
 <td>WECC:
         &quot;Battery Storage Dynamic Modeling Guideline&quot;,
-	November 2016,
-        (<a href=\"https://www.wecc.org/Reliability/WECC%20Battery%20Storage%20Guideline%20updates_%20Bo%204-5-17%20SLT%204-7-17%20XX%20SC.docx\">document</a>)
+        November 2016,
+        (<a href=\"https://docest.com/doc/133900/energy-storage-dynamic-modeling-guideline\">document</a>)
 </td>
 </tr>
 <tr>
 <td>[WECCPhotovoltaic]</td>
 <td>WECC:
         &quot;Solar Photovoltaic Power Plant Modeling and Validation Guideline&quot;,
-	December 2019,
-        (<a href=\"https://www.wecc.org/Reliability/Solar%20PV%20Plant%20Modeling%20and%20Validation%20Guidline.pdf\">document</a>)
+        December 2019,
+        (<a href=\"https://web.archive.org/web/20230510163349/https://www.wecc.org/Reliability/Solar%20PV%20Plant%20Modeling%20and%20Validation%20Guidline.pdf\">document</a>)
 </td>
 </tr>
 <tr>
 <td>[WECCWind]</td>
 <td>WECC:
         &quot;Wind Power Plant Dynamic Modeling Guideline&quot;,
-	April 2014,
-        (<a href=\"https://www.wecc.org/Reliability/WECC%20Wind%20Plant%20Dynamic%20Modeling%20Guidelines.pdf\">document</a>)
+        April 2014,
+        (<a href=\"https://web.archive.org/web/20240815190629/https://www.wecc.org/Reliability/WECC%20Wind%20Plant%20Dynamic%20Modeling%20Guidelines.pdf\">document</a>)
 </td>
 </tr>
 </table>

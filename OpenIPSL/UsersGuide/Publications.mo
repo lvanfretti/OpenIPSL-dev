@@ -3,7 +3,7 @@ model Publications "Publications"
   extends Modelica.Icons.References;
   annotation (Documentation(info="<html>
 <p>The list of publications written about OpenIPSL library and its models can be found below. </p>
-<p>If you use OpenIPSL in your work or research, we kindly ask you to cite (preferably), our <a href=\"https://www.sciencedirect.com/science/article/pii/S2352711018300050\">SoftwareX</a> paper:</p>
+<p>If you use OpenIPSL in your work or research, we kindly ask you to cite (preferably), our <a href=\"https://doi.org/10.1016/j.softx.2018.01.002\">SoftwareX</a> paper:</p>
 
 <ul>
 <li>M. Baudette, M. Castro, T. Rabuzin, J. Lavenius, T. Bogodorova, L. Vanfretti,
@@ -15,6 +15,15 @@ model Publications "Publications"
 <p>Otherwise, you cite one of the following papers, according to a specific use of OpenIPSL:</p>
 
 <ul>
+
+<li>Fachini, Fernando, Srijita Bhattacharjee, Miguel Aguilera, Luigi Vanfretti, Giuseppe Laera, Tetiana Bogodorova, Ardeshir Moftakhari, Michael Huylo, and Atila Novoselac,
+    &quot;Exploiting Modelica and the OpenIPSL for University Campus Microgrid Model Development&quot;,
+    15th International Modelica Conference 2023, October 9-11, Aachen, Germany.</li>
+
+<li>Fachini, Fernando, Aisling Pigott, Giuseppe Laera, Tetiana Bogodorova, Luigi Vanfretti, and Kyri Baker,
+    &quot;Developing a Campus Microgrid Model utilizing Modelica and the OpenIPSL Library&quot;,
+    2023 11th Workshop on Modelling and Simulation of Cyber-Physical Energy Systems (MSCPES), pp. 1-6. IEEE, 2023.
+    <a href=\"https://ieeexplore.ieee.org/document/10123421\">DOI:10.1109/MSCPES58582.2023.10123421</a></li>
 
 <li>M. de Castro, G. Laera, F. Fachini, S.A. Dorado-Rojas, L. Vanfretti, S. Ahmed, C. Mishra, K.D. Jones and R. M. Gardner,
     &quot;Power System Real-Time Simulation using Modelica and the FMI&quot;,
