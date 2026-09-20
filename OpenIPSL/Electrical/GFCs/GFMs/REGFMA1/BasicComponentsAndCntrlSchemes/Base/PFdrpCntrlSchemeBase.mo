@@ -71,15 +71,15 @@ equation
     annotation (Line(points={{22,0},{120,0},{120,80},{210,80}},
                                               color={0,0,127}));
   annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-200,-200},
-            {200,200}}),                                        graphics={
+            {200,200}}), graphics={
           Rectangle(
           extent={{-200,200},{200,-200}},
           lineColor={28,108,200},
           lineThickness=1), Text(
           extent={{-100,102},{100,0}},
           textColor={28,108,200},
-          textString="P-f Drp")}),                               Diagram(
-        coordinateSystem(                           extent={{-200,-200},{200,200}},
+          textString="P-f Drp")}), Diagram(
+        coordinateSystem( extent={{-200,-200},{200,200}},
           grid={1,1}), graphics={Polygon(
           points={{-8,-31},{-13,-51},{-3,-51},{-8,-31}},
           lineColor={238,46,47},
@@ -88,7 +88,7 @@ equation
           lineThickness=1)}),
     Documentation(info="<html>
 This is a partial model (or base model) that is extended to implement the P-f droop scheme variants.
-It contains the basic droop function and the active power measurement filter. 
+It contains the basic droop function and the active power measurement filter.
 A red triangle indicates the input for the signal of the active power limiters.
 </html>"));
 end PFdrpCntrlSchemeBase;

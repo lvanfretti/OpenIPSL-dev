@@ -46,8 +46,7 @@ equation
           lineThickness=0.5), Text(
           extent={{-82,42},{80,-40}},
           textColor={28,108,200},
-          textString="Q-v Drp")}), Diagram(coordinateSystem(
-          preserveAspectRatio=false)),
+          textString="Q-v Drp")}),
     Documentation(info="<html>
 <p>
 This model implements the vbasic droop function of the Q-v control scheme.

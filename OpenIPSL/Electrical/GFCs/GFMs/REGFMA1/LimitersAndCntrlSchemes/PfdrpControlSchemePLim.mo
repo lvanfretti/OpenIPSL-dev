@@ -10,7 +10,6 @@ model PfdrpControlSchemePLim "P-f droop control scheme with limiter input"
   Modelica.Blocks.Sources.Constant sig_P0(k=P0) annotation (Placement(
         transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={-130,-130})));
   parameter Real Pmax=0.9
     "Upper limit of the inverter active power output. Normal Range: [0.1 - 1] pu"
@@ -39,15 +38,14 @@ equation
           fillPattern=FillPattern.Solid), Text(
           extent={{-98,-18},{98,-80}},
           textColor={28,108,200},
-          textString="Plim in")}), Diagram(coordinateSystem(
-          preserveAspectRatio=false)),
+          textString="Plim in")}),
     Documentation(info="<html>
 <p>
 This model extends the base control scheme and adds the active power limiter.
 </p>
 
 <p>
-Note that the constant block <code> sig_P0</code> provides the value of the active power  <code>P0</code> for initialization of the <code>plimiter</code> block.
+Note that the constant block <code> sig_P0</code> provides the value of the active power <code>P0</code> for initialization of the <code>plimiter</code> block.
 </p>
 
 </html>"));

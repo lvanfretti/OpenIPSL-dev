@@ -204,13 +204,12 @@ equation
         Line(
           points={{-98,-40},{-58,-40}},
           color={28,108,200},
-          thickness=1)}),                                        Diagram(
-        coordinateSystem(preserveAspectRatio=false)),
+          thickness=1)}),
     Documentation(info="<html>
 This model extends the voltage source with an impedance model <code>OpenIPSL.Electrical.Sources.SourceBehindImpedance.VoltageSources.VSourceIO</code>.
 It expands the afromentioned model to provide additional outputs, which are later used as measurements or for initialization by the different control blocks.
 <p>
-The 
+The
 </p>
 </html>"));
 end VSIOforGFM;

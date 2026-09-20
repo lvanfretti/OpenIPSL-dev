@@ -14,7 +14,7 @@ model VSIOwVReInput
     final enableS_b=true);
 
   // Instantiation of graphical components
-  Interfaces.PwPin_p                   p
+  Interfaces.PwPin_p p
     annotation (Placement(transformation(extent={{100,-10},{120,10}}),
         iconTransformation(extent={{100,-10},{120,10}})));
   Modelica.Blocks.Interfaces.RealOutput Emag "Internal voltage magnitude"
@@ -80,14 +80,13 @@ model VSIOwVReInput
     "Initial reactive power (machine base)";
 
   // Auxiliary parameters and variables
-  parameter Real E0  = sqrt(Er0^2+Ei0^2) "Initial value of the internal voltage source phasor magnitude";
+  parameter Real E0 = sqrt(Er0^2+Ei0^2) "Initial value of the internal voltage source phasor magnitude";
   parameter Real delta0 = atan2(Ei0, Er0) "Initial value of the internal voltage source phasor angle";
   Real Er(start=Er0) "Internal voltage source, real part";
   Real Ei(start=Ei0) "Internal voltage source, imaginary part";
 
   // Choice of input type
   parameter Boolean useEphasorInput = true "If true, the magnitude E and angle delta must be supplied, if false, then a deviation \\Delta E and \\Delta delta should be supplied";
-
 
 protected
   parameter Real vr0=v_0*cos(angle_0);
@@ -99,8 +98,8 @@ protected
 
 equation
   if useEphasorInput then
-    delta = uEang   "Internal voltage angle, delta, provided by the graphical input uEang";
-    E = uEmag   "Internal voltage magnitude, E, provided by the graphical input uEmag";
+    delta = uEang "Internal voltage angle, delta, provided by the graphical input uEang";
+    E = uEmag "Internal voltage magnitude, E, provided by the graphical input uEmag";
     Er = p2R.y_re "Real part of phasor calculated with the p2R block on the diagram layer";
     Ei = p2R.y_im "Imaginary part of phasor calculated with the p2R block on the diagram layer";
   else
@@ -187,7 +186,7 @@ equation
     Diagram(graphics={Text(
           extent={{-80,-20},{80,-100}},
           textColor={217,67,180},
-          textString="Text Layer assigns p2R.y_re and p2R.y_im to uvre and uvim, 
+          textString="Text Layer assigns p2R.y_re and p2R.y_im to uvre and uvim,
 which are the real and imaginary input
  voltage deviations from the initial value"), Rectangle(
           extent={{-8,20},{20,-20}},

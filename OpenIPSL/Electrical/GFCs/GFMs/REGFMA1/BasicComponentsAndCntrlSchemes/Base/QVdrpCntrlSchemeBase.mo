@@ -28,13 +28,11 @@ partial model QVdrpCntrlSchemeBase
     "Reactive power Qref set to zero when QVFlag = 1" annotation (Placement(
         transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={-190,50})));
   Modelica.Blocks.Logical.Switch VFlag_switch
     "VFlag is used to change the voltage control mode" annotation (Placement(
         transformation(
         extent={{-20,-20},{20,20}},
-        rotation=0,
         origin={160,0})));
   Modelica.Blocks.Sources.BooleanConstant VFlag_val(k=VFlag_val_k)
     "VFlag = true/false switches the voltage control mode"
@@ -140,9 +138,9 @@ equation
   connect(Vmeas, Vfilt.u)
     annotation (Line(points={{-220,160},{-162,160}}, color={0,0,127}));
   connect(sum_Vcmd_Vinv.u1, qv_drp1.Vout_qv_droop) annotation (Line(points={{32,140},
-          {20,140},{20,0},{3,0}},      color={0,0,127}));
+          {20,140},{20,0},{3,0}}, color={0,0,127}));
   connect(Vfilt.y, sum_Vcmd_Vinv.u2) annotation (Line(points={{-139,160},{40,160},
-          {40,148}},                   color={0,0,127}));
+          {40,148}}, color={0,0,127}));
   connect(sum_Vcmd_Vinv.y, kpvGain.u)
     annotation (Line(points={{49,140},{60,140},{60,156},{78,156}},
                                                  color={0,0,127}));
@@ -164,7 +162,7 @@ equation
         Rectangle(
           extent={{-200,200},{200,-200}},
           lineColor={28,108,200},
-          lineThickness=0.5)}),                                  Diagram(
+          lineThickness=0.5)}), Diagram(
         coordinateSystem(preserveAspectRatio=false,
         extent={{-200,-200},{200,200}},
         initialScale=0.5), graphics={
@@ -172,25 +170,25 @@ equation
           extent={{-162,62},{-82,36}},
           textColor={28,108,200},
           textString="u2 = true
-QVFlag = 1 
+QVFlag = 1
 Set --> Qref = 0"),
         Text(
           extent={{-160,-26},{-70,-54}},
           textColor={28,108,200},
           textString="u2 = false
-QVFlag = 0 
+QVFlag = 0
 Set --> Qref = Qinv"),
         Text(
           extent={{116,66},{196,40}},
           textColor={28,108,200},
           textString="u2 = true
-VFlag = 1 
+VFlag = 1
 Set --> PI with Limiter"),
         Text(
           extent={{114,-34},{194,-60}},
           textColor={28,108,200},
           textString="u2 = false
-VFlag = 0 
+VFlag = 0
 Set --> E Limited"),
         Polygon(
           points={{-30,-57},{-35,-77},{-25,-77},{-30,-57}},
@@ -200,7 +198,7 @@ Set --> E Limited"),
           lineThickness=1)}),
     Documentation(info="<html>
 This is a partial model (or base model) that is extended to implement the Q-f droop scheme variants.
-It contains the basic droop function and the reactive power measurement filter. 
+It contains the basic droop function and the reactive power measurement filter.
 A red triangle indicates the input for the signal of the reactive power limiter.
 
 </html>"));

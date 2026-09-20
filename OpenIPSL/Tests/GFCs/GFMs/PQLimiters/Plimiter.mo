@@ -29,13 +29,13 @@ model Plimiter "Tests the Plimiter"
     annotation (Placement(transformation(extent={{100,-50},{120,-30}})));
 equation
   connect(P0_ini.y, Plim_upper.P0_ini)
-    annotation (Line(points={{-21,0},{0,0},{0,38}},   color={0,0,127}));
+    annotation (Line(points={{-21,0},{0,0},{0,38}}, color={0,0,127}));
   connect(Plim_upper.Plim_out, Plim_out_upper)
     annotation (Line(points={{21,60},{110,60}}, color={0,0,127}));
   connect(Pfilt_upper.y, Plim_upper.Pfilt)
     annotation (Line(points={{-39,60},{-22,60}}, color={0,0,127}));
   connect(Plim_lower.P0_ini, P0_ini.y)
-    annotation (Line(points={{0,-18},{0,0},{-21,0}},   color={0,0,127}));
+    annotation (Line(points={{0,-18},{0,0},{-21,0}}, color={0,0,127}));
   connect(Pfilt_lower.y, Plim_lower.Pfilt)
     annotation (Line(points={{-39,-40},{-22,-40}}, color={0,0,127}));
   connect(Plim_lower.Plim_out, Plim_out_lower)

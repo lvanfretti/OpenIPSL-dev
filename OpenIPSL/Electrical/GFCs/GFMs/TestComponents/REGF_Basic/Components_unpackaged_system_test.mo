@@ -26,13 +26,13 @@ model Components_unpackaged_system_test
         extent={{-8,-8},{8,8}},
         rotation=180,
         origin={-126,-80})));
-  Modelica.Blocks.Sources.Ramp     Vref(
+  Modelica.Blocks.Sources.Ramp Vref(
     height=0.1,
     duration=1,
     offset=0.5,
     startTime=46)
     annotation (Placement(transformation(extent={{-340,100},{-320,120}})));
-  Modelica.Blocks.Sources.Ramp     Vref1(
+  Modelica.Blocks.Sources.Ramp Vref1(
     height=-0.1,
     duration=1.0,
     offset=0.5,
@@ -52,7 +52,6 @@ model Components_unpackaged_system_test
   Modelica.Blocks.Math.Gain gain2Q0pu(k=1/100) annotation (Placement(
         transformation(
         extent={{-8,-8},{8,8}},
-        rotation=0,
         origin={-254,38})));
   Modelica.Blocks.Sources.RealExpression sig_E0(y=VS.E0) annotation (
       Placement(transformation(
@@ -102,14 +101,14 @@ equation
   connect(sig_V0.y, q_v_droop_scheme.Vt0) annotation (Line(points={{-209,
           116},{-220,116},{-220,103.8}}, color={0,0,127}));
   connect(q_v_droop_scheme.Edroop, VS.uEmag) annotation (Line(points={{-199,84},
-          {-134,84},{-134,8},{-106,8}},            color={0,0,127}));
+          {-134,84},{-134,8},{-106,8}}, color={0,0,127}));
   connect(basic_dROOP.delta_droop, VS.uEang) annotation (Line(points={{-219,-10},
-          {-134,-10},{-134,-8},{-106,-8}},           color={0,0,127}));
+          {-134,-10},{-134,-8},{-106,-8}}, color={0,0,127}));
   connect(VS.p, GEN1.p)
     annotation (Line(points={{-60,0},{-30,0}}, color={0,0,255}));
   annotation (experiment(
       StopTime=120,
       __Dymola_NumberOfIntervals=5000,
-      __Dymola_Algorithm="Dassl"),                                 Diagram(
+      __Dymola_Algorithm="Dassl"), Diagram(
         coordinateSystem(extent={{-400,-200},{400,200}}, initialScale=0.5)));
 end Components_unpackaged_system_test;

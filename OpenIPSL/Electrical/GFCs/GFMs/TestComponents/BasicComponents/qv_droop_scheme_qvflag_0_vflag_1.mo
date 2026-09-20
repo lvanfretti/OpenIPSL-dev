@@ -26,7 +26,7 @@ model qv_droop_scheme_qvflag_0_vflag_1
     annotation (Placement(transformation(extent={{60,-10},{80,10}})));
   Modelica.Blocks.Sources.Constant Q0(k=5.416582/100)
     annotation (Placement(transformation(extent={{-80,-60},{-60,-40}})));
-  Modelica.Blocks.Sources.Constant E0(k=1.05264)     annotation (
+  Modelica.Blocks.Sources.Constant E0(k=1.05264) annotation (
       Placement(transformation(
         extent={{-10,-10},{10,10}},
         rotation=180,
@@ -53,17 +53,17 @@ equation
   connect(E0.y, q_v_droop_scheme.Emag0) annotation (Line(points={{59,-50},
           {24,-50},{24,-52},{16,-52},{16,-44}}, color={0,0,127}));
   connect(V0.y, q_v_droop_scheme.Vt0) annotation (Line(points={{3,54},{0,54},{0,
-          44}},              color={0,0,127}));
+          44}}, color={0,0,127}));
   annotation (Diagram(graphics={
         Text(
           extent={{-4,-68},{96,-108}},
           textColor={28,108,200},
-          textString="VFlag = 1 
+          textString="VFlag = 1
 Set --> PI with Limiter"),
         Text(
           extent={{-98,-74},{-8,-102}},
           textColor={28,108,200},
-          textString="QVFlag = 0 
+          textString="QVFlag = 0
 Set --> Qref = Qinv")}),
                    experiment(StopTime=10));
 end qv_droop_scheme_qvflag_0_vflag_1;

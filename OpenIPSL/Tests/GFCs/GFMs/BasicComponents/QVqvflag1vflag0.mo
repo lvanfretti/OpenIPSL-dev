@@ -53,17 +53,17 @@ equation
   connect(E0.y, q_v_droop_scheme.Emag0) annotation (Line(points={{59,-50},
           {24,-50},{24,-52},{16,-52},{16,-44}}, color={0,0,127}));
   connect(V0.y, q_v_droop_scheme.Vt0) annotation (Line(points={{3,54},{0,54},{0,
-          44}},              color={0,0,127}));
+          44}}, color={0,0,127}));
   annotation (Diagram(graphics={
         Text(
           extent={{10,-72},{90,-98}},
           textColor={28,108,200},
-          textString="VFlag = 0 
+          textString="VFlag = 0
 Set --> E Limited"),
         Text(
           extent={{-84,-74},{-4,-100}},
           textColor={28,108,200},
-          textString="QVFlag = 1 
+          textString="QVFlag = 1
 Set --> Qref = 0")}),
                 experiment(StopTime=10),
     Documentation(info="<html>

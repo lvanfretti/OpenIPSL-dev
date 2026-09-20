@@ -53,6 +53,6 @@ equation
   annotation (experiment(
       StopTime=60,
       __Dymola_NumberOfIntervals=5000,
-      __Dymola_Algorithm="Dassl"),                                 Diagram(
+      __Dymola_Algorithm="Dassl"), Diagram(
         coordinateSystem(extent={{-240,-100},{100,100}}, initialScale=0.5)));
 end Packaged_system_test;

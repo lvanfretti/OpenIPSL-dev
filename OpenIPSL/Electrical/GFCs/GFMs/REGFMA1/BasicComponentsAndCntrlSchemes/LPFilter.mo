@@ -29,8 +29,7 @@ equation
         Text(
           extent={{-100,162},{100,102}},
           textColor={28,108,200},
-          textString="%name")}),                                 Diagram(
-        coordinateSystem(preserveAspectRatio=false)),preferredView="diagram",
+          textString="%name")}),preferredView="diagram",
     Documentation(info="<html>
 Low-pass filter model built using the <code>Modelica.Blocks.Continuous.TransferFunction</code> block from the MSL.
 

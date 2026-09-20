@@ -43,17 +43,17 @@ equation
   connect(DEm.y, VS.uEmag) annotation (Line(points={{-149,12},{-124,12}},
                                    color={0,0,127}));
   connect(DEang.y, VS.uEang) annotation (Line(points={{-149,-18},{-140,-18},{
-          -140,-12},{-124,-12}},       color={0,0,127}));
+          -140,-12},{-124,-12}}, color={0,0,127}));
   connect(virtualRe.R_e, VS.R_e)
     annotation (Line(points={{-100,-39},{-100,-24}}, color={0,0,127}));
   connect(EmagVal.y, virtualRe.Emag)
     annotation (Line(points={{-123,-44},{-112,-44}}, color={0,0,127}));
   connect(EangVal.y, virtualRe.Eang) annotation (Line(points={{-123,-56},{-112,
-          -56}},                  color={0,0,127}));
+          -56}}, color={0,0,127}));
   connect(Vval.y, virtualRe.V)
     annotation (Line(points={{-81,-44},{-88,-44}}, color={0,0,127}));
   connect(angleVval.y, virtualRe.anglev) annotation (Line(points={{-81,-56},{
-          -88,-56}},                           color={0,0,127}));
+          -88,-56}}, color={0,0,127}));
   connect(GEN1.p, pwCurrent.n)
     annotation (Line(points={{-30,0},{-36,0}}, color={0,0,255}));
   connect(VS.p, pwCurrent.p)

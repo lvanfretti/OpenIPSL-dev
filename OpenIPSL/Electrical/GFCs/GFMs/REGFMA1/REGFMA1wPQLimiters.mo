@@ -51,7 +51,6 @@ model REGFMA1wPQLimiters
                                                annotation (Placement(
         transformation(
         extent={{-8,-8},{8,8}},
-        rotation=0,
         origin={-50,0})));
   Modelica.Blocks.Sources.RealExpression sig_E0(y=VS.E0) annotation (Placement(
         transformation(
@@ -63,21 +62,20 @@ model REGFMA1wPQLimiters
   Modelica.Blocks.Sources.RealExpression sig_Vmeas(y=VS.V) annotation (
       Placement(transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={-70,80})));
   Modelica.Blocks.Sources.RealExpression sig_V0(y=VS.vt0) annotation (Placement(
         transformation(
         extent={{-10,-10},{10,10}},
         rotation=180,
         origin={-4,92})));
-  Interfaces.PwPin p annotation (Placement(transformation(rotation=0, extent={{
+  Interfaces.PwPin p annotation (Placement(transformation(extent={{
             99,-9},{118,10}}), iconTransformation(extent={{100,-20},{140,20}})));
   Modelica.Blocks.Interfaces.RealInput Pref "Active power reference"
                                             annotation (Placement(
-        transformation(rotation=0, extent={{-131,-75},{-101,-45}})));
+        transformation(extent={{-131,-75},{-101,-45}})));
   Modelica.Blocks.Interfaces.RealInput Vref "Reference voltage input"
                                             annotation (Placement(
-        transformation(rotation=0, extent={{-131,45},{-101,75}})));
+        transformation(extent={{-131,45},{-101,75}})));
 
   parameter Real M_b=100 "Voltage Source base power rating (MVA)"
     annotation (Dialog(tab="Voltage Source parameters"));
@@ -107,64 +105,52 @@ model REGFMA1wPQLimiters
   Modelica.Blocks.Sources.RealExpression sigPmeas(y=VS.P_meas) annotation (
       Placement(transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={70,90})));
   Modelica.Blocks.Sources.RealExpression sigQmeas(y=VS.Q_meas) annotation (
       Placement(transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={70,70})));
   Modelica.Blocks.Sources.RealExpression sigVmeas(y=VS.V) annotation (
       Placement(transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={80,-20})));
   Modelica.Blocks.Sources.RealExpression siganglevmeas(y=VS.anglev)
     annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={80,-40})));
   Modelica.Blocks.Sources.RealExpression sigaEmag(y=VS.Emag) annotation (
       Placement(transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={80,-60})));
   Modelica.Blocks.Sources.RealExpression sigaEdelta(y=VS.Edelta) annotation (
       Placement(transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={80,-80})));
   Modelica.Blocks.Interfaces.RealOutput P_meas "VS P measurement" annotation
     (Placement(transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={110,90})));
   Modelica.Blocks.Interfaces.RealOutput Q_meas "VS Q meas"
                                          annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={110,70})));
   Modelica.Blocks.Interfaces.RealOutput V "VS terminal voltage" annotation (
       Placement(transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={110,-20})));
   Modelica.Blocks.Interfaces.RealOutput anglev "VS terminal angle"
     annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={110,-40})));
   Modelica.Blocks.Interfaces.RealOutput Emag
     "Internal voltage source voltage magnitude E"
                                       annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={110,-60})));
   Modelica.Blocks.Interfaces.RealOutput Edelta
     "Internal voltage source angle delta"
                                       annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={110,-80})));
   Modelica.Blocks.Interfaces.RealOutput omega_droop
     "Speed output from the P-f droop controller"
@@ -221,33 +207,33 @@ equation
   connect(sig_Pmeas.y, pfdroopcntrl.Pmeas)
     annotation (Line(points={{-61,-48},{-42,-48}}, color={0,0,127}));
   connect(sig_q0.y,gain2Q0pu. u)
-    annotation (Line(points={{-63,0},{-59.6,0}},     color={0,0,127}));
+    annotation (Line(points={{-63,0},{-59.6,0}}, color={0,0,127}));
   connect(gain2Q0pu.y,q_v_droop_scheme. Qout0) annotation (Line(points={{-41.2,0},
-          {-28,0},{-28,38.2}},               color={0,0,127}));
+          {-28,0},{-28,38.2}}, color={0,0,127}));
   connect(sig_E0.y,q_v_droop_scheme. Emag0) annotation (Line(points={{-12,17},{-12,
-          38.2}},                          color={0,0,127}));
+          38.2}}, color={0,0,127}));
   connect(sig_Qmeas.y,q_v_droop_scheme. Qmeas) annotation (Line(points={{-63,30},
-          {-63,43.6},{-42,43.6}},            color={0,0,127}));
+          {-63,43.6},{-42,43.6}}, color={0,0,127}));
   connect(sig_Vmeas.y,q_v_droop_scheme. Vmeas) annotation (Line(points={{-59,80},
-          {-42,80},{-42,72.4}},                          color={0,0,127}));
+          {-42,80},{-42,72.4}}, color={0,0,127}));
   connect(sig_V0.y,q_v_droop_scheme. Vt0) annotation (Line(points={{-15,92},{-20,
-          92},{-20,77.8}},               color={0,0,127}));
+          92},{-20,77.8}}, color={0,0,127}));
   connect(q_v_droop_scheme.Edroop, VS.uEmag) annotation (Line(points={{1,58},{8,
-          58},{8,8},{16,8}},              color={0,0,127}));
+          58},{8,8},{16,8}}, color={0,0,127}));
   connect(pfdroopcntrl.delta_droop, VS.uEang) annotation (Line(points={{1,-32},{
           8,-32},{8,-8},{16,-8}}, color={0,0,127}));
   connect(Pref, pfdroopcntrl.Pref) annotation (Line(points={{-116,-60},{-96,-60},
           {-96,-32},{-42,-32}}, color={0,0,127}));
   connect(Vref, q_v_droop_scheme.Vref) annotation (Line(points={{-116,60},{-84,60},
-          {-84,67},{-42,67}},       color={0,0,127}));
+          {-84,67},{-42,67}}, color={0,0,127}));
   connect(sigPmeas.y,P_meas)
-    annotation (Line(points={{81,90},{110,90}},     color={0,0,127}));
+    annotation (Line(points={{81,90},{110,90}}, color={0,0,127}));
   connect(sigQmeas.y,Q_meas)
-    annotation (Line(points={{81,70},{110,70}},     color={0,0,127}));
+    annotation (Line(points={{81,70},{110,70}}, color={0,0,127}));
   connect(sigVmeas.y,V)
-    annotation (Line(points={{91,-20},{110,-20}},   color={0,0,127}));
+    annotation (Line(points={{91,-20},{110,-20}}, color={0,0,127}));
   connect(siganglevmeas.y,anglev)
-    annotation (Line(points={{91,-40},{110,-40}},   color={0,0,127}));
+    annotation (Line(points={{91,-40},{110,-40}}, color={0,0,127}));
   connect(sigaEmag.y,Emag)
     annotation (Line(points={{91,-60},{110,-60}}, color={0,0,127}));
   connect(sigaEdelta.y,Edelta)
@@ -269,9 +255,9 @@ equation
           extent={{-100,140},{100,102}},
           textColor={28,108,200},
           textString="%name"),
-        Rectangle(extent={{0,40},{80,-40}},       lineColor={28,108,200},
+        Rectangle(extent={{0,40},{80,-40}}, lineColor={28,108,200},
           lineThickness=1),
-        Line(points={{80,-40},{0,40}},       color={28,108,200},
+        Line(points={{80,-40},{0,40}}, color={28,108,200},
           thickness=1),
         Line(
           points={{12,-12},{32,-12}},
@@ -314,7 +300,7 @@ equation
           startAngle=0,
           endAngle=180,
           closure=EllipseClosure.None),
-        Rectangle(extent={{-70,20},{-28,-20}},    lineColor={28,108,200},
+        Rectangle(extent={{-70,20},{-28,-20}}, lineColor={28,108,200},
           lineThickness=1,
           fillColor={0,203,203},
           fillPattern=FillPattern.Solid),
@@ -361,7 +347,7 @@ equation
         Line(
           points={{-50,-22},{-50,-40}},
           color={28,108,200},
-          thickness=1),      Rectangle(
+          thickness=1), Rectangle(
           extent={{-80,-50},{80,-90}},
           lineColor={238,46,47},
           fillColor={234,234,234},
@@ -371,7 +357,7 @@ equation
           textString="Plim / Qlim")}), Documentation(info="<html>
 <p>
 This is the second variant representation of the REGFM_A1 model.
-It includes both P-f and Q-v droop control schemes, and limiters for the active and reactive power. 
+It includes both P-f and Q-v droop control schemes, and limiters for the active and reactive power.
 Differently from <a href=\"modelica://OpenIPSL.UsersGuide.References\">[Du2021]</a>, it does not include fault current limiter functionalities. </p>
 
 </html>"));

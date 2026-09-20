@@ -12,7 +12,6 @@ model PFdrpScheme "Test"
   Modelica.Blocks.Sources.Constant Pref(k=40.0/100) annotation (Placement(
         transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={-90,10})));
   Modelica.Blocks.Interfaces.RealOutput delta_droop
     "Desired internal angle from the P-f droop controller"
@@ -27,7 +26,7 @@ model PFdrpScheme "Test"
     annotation (Placement(transformation(extent={{-20,-20},{20,20}})));
 equation
   connect(Pref.y, p_f_droop_scheme_nolims.Pref) annotation (Line(points={{-79,10},
-          {-30,10},{-30,8},{-22,8}},                color={0,0,127}));
+          {-30,10},{-30,8},{-22,8}}, color={0,0,127}));
   connect(step.y, p_f_droop_scheme_nolims.Pmeas) annotation (Line(
         points={{-79,-30},{-32,-30},{-32,-8},{-22,-8}},
                                                 color={0,0,127}));
@@ -35,7 +34,7 @@ equation
         points={{-8,-22},{-8,-30},{-79,-30}},
         color={0,0,127}));
   connect(p_f_droop_scheme_nolims.Edelta0,Edelta0. y) annotation (Line(
-        points={{8,-22},{8,-54},{30,-54},{30,-59}},   color={0,0,127}));
+        points={{8,-22},{8,-54},{30,-54},{30,-59}}, color={0,0,127}));
   connect(p_f_droop_scheme_nolims.delta_droop, delta_droop)
     annotation (Line(points={{21,8},{94,8},{94,12},{110,12}},
                                               color={0,0,127}));

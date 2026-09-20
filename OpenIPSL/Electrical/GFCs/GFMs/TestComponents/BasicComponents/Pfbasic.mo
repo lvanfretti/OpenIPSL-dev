@@ -6,7 +6,6 @@ model Pfbasic "Tests the PFbasic block"
   BasicComponentsAndCntrlSchemes.low_pass_filter lowPassFilter annotation (
       Placement(transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={-50,-30})));
   Modelica.Blocks.Sources.Step step(
     height=41.0/100,
@@ -21,7 +20,6 @@ model Pfbasic "Tests the PFbasic block"
   Modelica.Blocks.Sources.Constant Pref(k=40.0/100) annotation (Placement(
         transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={-90,0})));
   Modelica.Blocks.Sources.Constant Plimin1(k=0.14)
                                                annotation (Placement(

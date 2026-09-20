@@ -50,13 +50,13 @@ equation
   connect(Vref_down.y, add.u2) annotation (Line(points={{-199,10},{-194,
           10},{-194,24},{-182,24}}, color={0,0,127}));
   connect(add.y, GFC.Vref) annotation (Line(points={{-159,30},{-154,30},{-154,
-          20},{-144.8,20}},      color={0,0,127}));
+          20},{-144.8,20}}, color={0,0,127}));
   connect(Pramp.y, add3_1_Pref.u1)
     annotation (Line(points={{-219,-22},{-182,-22}}, color={0,0,127}));
   connect(P_lim_test_1.y, add3_1_Pref.u2) annotation (Line(points={{-219,
           -70},{-208,-70},{-208,-30},{-182,-30}}, color={0,0,127}));
   connect(add3_1_Pref.y, GFC.Pref) annotation (Line(points={{-159,-30},{-154,
-          -30},{-154,-16},{-144.8,-16}},      color={0,0,127}));
+          -30},{-154,-16},{-144.8,-16}}, color={0,0,127}));
   connect(P_lim_test_2.y, add3_1_Pref.u3) annotation (Line(points={{-219,
           -110},{-194,-110},{-194,-38},{-182,-38}}, color={0,0,127}));
   connect(GFC.p, GEN1.p)
@@ -65,6 +65,6 @@ equation
   annotation (experiment(
       StopTime=60,
       __Dymola_NumberOfIntervals=5000,
-      __Dymola_Algorithm="Dassl"),                                 Diagram(
+      __Dymola_Algorithm="Dassl"), Diagram(
         coordinateSystem(extent={{-260,-120},{100,100}}, initialScale=0.5)));
 end Packaged_system_test;

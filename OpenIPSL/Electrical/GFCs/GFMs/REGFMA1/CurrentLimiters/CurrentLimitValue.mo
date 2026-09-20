@@ -103,7 +103,7 @@ equation
           lineThickness=1,
           fillColor={170,213,255},
           fillPattern=FillPattern.Solid),
-        Line(points={{-40,0},{0,0}},   color={28,108,200},
+        Line(points={{-40,0},{0,0}}, color={28,108,200},
           thickness=1),
         Polygon(
           points={{0,20},{40,0},{0,-20},{0,20}},
@@ -114,5 +114,5 @@ equation
         Rectangle(
           extent={{-100,100},{100,-100}},
           lineColor={28,108,200},
-          lineThickness=1)}), Diagram(coordinateSystem(preserveAspectRatio=false)));
+          lineThickness=1)}));
 end CurrentLimitValue;

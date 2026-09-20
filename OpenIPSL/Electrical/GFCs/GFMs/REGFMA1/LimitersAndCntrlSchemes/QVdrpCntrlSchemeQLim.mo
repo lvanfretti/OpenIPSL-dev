@@ -12,7 +12,6 @@ model QVdrpCntrlSchemeQLim "Q-v droop control scheme with Q limiter input"
   Modelica.Blocks.Sources.Constant sig_Q0(k=Q0) annotation (Placement(
         transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={-110,-170})));
   parameter Real Qmax=0.44
     "Upper limit of the inverter reactive power output. Normal Range: [0.44-1.0] pu"

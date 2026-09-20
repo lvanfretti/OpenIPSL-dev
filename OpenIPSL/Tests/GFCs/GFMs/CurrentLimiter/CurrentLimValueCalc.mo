@@ -79,9 +79,9 @@ equation
     annotation (Line(points={{-41,-40},{-34,-40},{-34,-48},{-24,-48}},
                                                  color={0,0,127}));
   connect(Eang.y, virtualRe.Eang) annotation (Line(points={{-39,-72},{-24,
-          -72}},                     color={0,0,127}));
+          -72}}, color={0,0,127}));
   connect(anglev.y, virtualRe.anglev) annotation (Line(points={{39,-72},{
-          24,-72}},                   color={0,0,127}));
+          24,-72}}, color={0,0,127}));
   connect(virtualRe.R_e, currentLimitValue.R_e)
     annotation (Line(points={{0,-38},{0,-4}}, color={0,0,127}));
   connect(EmagVal.y, currentLimitValue.Emag)
@@ -103,6 +103,5 @@ equation
   connect(currentLimitValue.ImaxAng, ImaxAng)
     annotation (Line(points={{16,42},{16,56},{40,56},{40,110}},
                                                color={0,0,127}));
-  annotation (experiment(StopTime=10, __Dymola_Algorithm="Dassl"), Icon(
-        coordinateSystem(preserveAspectRatio=false)));
+  annotation (experiment(StopTime=10, __Dymola_Algorithm="Dassl"));
 end CurrentLimValueCalc;

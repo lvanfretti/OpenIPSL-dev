@@ -2,13 +2,13 @@ within OpenIPSL.Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes;
 model PFdrp "P-f droop controller"
   import Modelica;
   outer OpenIPSL.Electrical.SystemBase SysData;
-    parameter Real f0     = SysData.fn "System frequency, f0 = 60 Hz";
+    parameter Real f0 = SysData.fn "System frequency, f0 = 60 Hz";
     parameter Real omega0 = 2*Modelica.Constants.pi*f0 "Synchronous speed, w0 = 2 x pi x f0";
-    parameter Real mp     = 0.005 "P-f droop gain. Normal range: 0.005 - 0.05 pu.";
+    parameter Real mp = 0.005 "P-f droop gain. Normal range: 0.005 - 0.05 pu.";
 
   Modelica.Blocks.Math.Feedback DP "Active power control error"
     annotation (Placement(transformation(extent={{-90,-10},{-70,10}})));
-  Modelica.Blocks.Math.Gain mpGain(k=mp)     "P-f droop gain"
+  Modelica.Blocks.Math.Gain mpGain(k=mp) "P-f droop gain"
     annotation (Placement(transformation(extent={{-60,-10},{-40,10}})));
   Modelica.Blocks.Interfaces.RealInput Pfilt
     "Filtered value of the active power measurement"
@@ -97,17 +97,16 @@ equation
         Text(
           extent={{-100,62},{100,-40}},
           textColor={28,108,200},
-          textString="P-f Drp")}),                               Diagram(
-        coordinateSystem(preserveAspectRatio=false)),preferredView="diagram",
+          textString="P-f Drp")}),preferredView="diagram",
     Documentation(info="<html>
-<p>This model implements the basic droop fundtion of the P-f control scheme.</p> 
+<p>This model implements the basic droop fundtion of the P-f control scheme.</p>
 
 <p>
 The gain block \"mpGain\" has a parameter <code>k=mp</code> that is used to set the droop value. The reminder of the model determines the angle and the frequency of the converter.
 </p>
 
 <p>
-The initial angle for the integrator, <code>delta0</code>, is set as a parameter with <code>fixed=false</code> that is propagated. 
+The initial angle for the integrator, <code>delta0</code>, is set as a parameter with <code>fixed=false</code> that is propagated.
 This parameter is set in the P-f droop control scheme base model using the value computed by the voltage source.
 In this model, an <code>initial equation</code> sets the initial value of the angle, <code>delta0</code>, through an initial equation that assigns it the value computed by the voltage source.
 </p>

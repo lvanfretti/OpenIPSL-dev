@@ -6,7 +6,6 @@ model Pfbasic "Tests the PFdrp"
   Electrical.GFCs.GFMs.REGFMA1.BasicComponentsAndCntrlSchemes.LPFilter lowPassFilter
     annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={-50,-30})));
   Modelica.Blocks.Sources.Step step(
     height=41.0/100,
@@ -21,7 +20,6 @@ model Pfbasic "Tests the PFdrp"
   Modelica.Blocks.Sources.Constant Pref(k=40.0/100) annotation (Placement(
         transformation(
         extent={{-10,-10},{10,10}},
-        rotation=0,
         origin={-90,0})));
   Modelica.Blocks.Sources.Constant Plimin1(k=0.14)
                                                annotation (Placement(
@@ -53,7 +51,6 @@ equation
   annotation (experiment(StopTime=2), Documentation(info="<html>
 Tests the P-f droop model components that are used to build the control scheme base class.
 Simulate and plot the input signal, <code> step.y</code>, and the output signals, <code>delta_droop</code> and <code> omega_droop</code>.
-
 
 </html>"));
 end Pfbasic;

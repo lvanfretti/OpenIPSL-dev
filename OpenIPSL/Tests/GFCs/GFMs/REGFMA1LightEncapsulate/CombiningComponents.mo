@@ -25,13 +25,13 @@ model CombiningComponents
         extent={{-8,-8},{8,8}},
         rotation=180,
         origin={-126,-120})));
-  Modelica.Blocks.Sources.Ramp     Vref(
+  Modelica.Blocks.Sources.Ramp Vref(
     height=0.1,
     duration=1,
     offset=0.5,
     startTime=46)
     annotation (Placement(transformation(extent={{-360,58},{-340,78}})));
-  Modelica.Blocks.Sources.Ramp     Vref1(
+  Modelica.Blocks.Sources.Ramp Vref1(
     height=-0.1,
     duration=1.0,
     offset=0.5,
@@ -51,7 +51,6 @@ model CombiningComponents
   Modelica.Blocks.Math.Gain gain2Q0pu(k=1/100) annotation (Placement(
         transformation(
         extent={{-8,-8},{8,8}},
-        rotation=0,
         origin={-274,-4})));
   Modelica.Blocks.Sources.RealExpression sig_E0(y=VS.E0) annotation (
       Placement(transformation(
@@ -81,38 +80,38 @@ equation
   connect(Vref1.y, add.u2) annotation (Line(points={{-339,30},{-334,30},{-334,
           44},{-322,44}}, color={0,0,127}));
   connect(q_v_droop_scheme.Vref, add.y) annotation (Line(points={{-262,51},{
-          -294,51},{-294,50},{-299,50}},  color={0,0,127}));
+          -294,51},{-294,50},{-299,50}}, color={0,0,127}));
   connect(Pstep.y, basic_dROOP.Pref) annotation (Line(points={{-299,-40},{-270,
-          -40},{-270,-52},{-262,-52}},     color={0,0,127}));
+          -40},{-270,-52},{-262,-52}}, color={0,0,127}));
   connect(sig_Pmeas.y, basic_dROOP.Pmeas) annotation (Line(points={{-297,-74},{
-          -280,-74},{-280,-68},{-262,-68}},       color={0,0,127}));
+          -280,-74},{-280,-68},{-262,-68}}, color={0,0,127}));
   connect(sig_q0.y, gain2Q0pu.u)
     annotation (Line(points={{-299,-4},{-283.6,-4}}, color={0,0,127}));
   connect(gain2Q0pu.y, q_v_droop_scheme.Qout0) annotation (Line(points={{-265.2,
-          -4},{-248,-4},{-248,22.2}},        color={0,0,127}));
+          -4},{-248,-4},{-248,22.2}}, color={0,0,127}));
   connect(sig_E0.y, q_v_droop_scheme.Emag0) annotation (Line(points={{-229,-2},
-          {-232,-2},{-232,22.2}},          color={0,0,127}));
+          {-232,-2},{-232,22.2}}, color={0,0,127}));
   connect(sig_Qmeas.y, q_v_droop_scheme.Qmeas) annotation (Line(points={{-299,26},
-          {-296,27.6},{-262,27.6}},          color={0,0,127}));
+          {-296,27.6},{-262,27.6}}, color={0,0,127}));
   connect(sig_Vmeas.y, q_v_droop_scheme.Vmeas) annotation (Line(points={{-299,80},
-          {-278,80},{-278,56.4},{-262,56.4}},            color={0,0,127}));
+          {-278,80},{-278,56.4},{-262,56.4}}, color={0,0,127}));
   connect(sig_V0.y, q_v_droop_scheme.Vt0) annotation (Line(points={{-229,74},{
-          -240,74},{-240,61.8}},         color={0,0,127}));
+          -240,74},{-240,61.8}}, color={0,0,127}));
   connect(q_v_droop_scheme.Edroop, VS.uEmag) annotation (Line(points={{-219,42},
-          {-154,42},{-154,8},{-106,8}},            color={0,0,127}));
+          {-154,42},{-154,8},{-106,8}}, color={0,0,127}));
   connect(basic_dROOP.delta_droop, VS.uEang) annotation (Line(points={{-219,-52},
-          {-134,-52},{-134,-8},{-106,-8}},           color={0,0,127}));
+          {-134,-52},{-134,-8},{-106,-8}}, color={0,0,127}));
   connect(VS.p, GEN1.p)
     annotation (Line(points={{-60,0},{-30,0}}, color={0,0,255}));
   annotation (experiment(
       StopTime=120,
       __Dymola_NumberOfIntervals=5000,
-      __Dymola_Algorithm="Dassl"),                                 Diagram(
+      __Dymola_Algorithm="Dassl"), Diagram(
         coordinateSystem(extent={{-400,-200},{100,100}}, initialScale=0.5,
         grid={2,2})),
-    Icon(coordinateSystem(grid={2,2}, initialScale=0.5)),
+
     Documentation(info="<html>
-Illustrates how to combine the different components in this sub-package to create the 
+Illustrates how to combine the different components in this sub-package to create the
 <code>REGFMA1light</code> model.
 </html>"));
 end CombiningComponents;

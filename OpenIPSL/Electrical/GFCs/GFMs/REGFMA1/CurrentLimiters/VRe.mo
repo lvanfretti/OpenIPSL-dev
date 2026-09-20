@@ -42,7 +42,7 @@ model VRe "Virtual Resistor Computation"
   Real subsval(start=0) "Result of substraction in the R_e computation";
 equation
   numval = Emag^2 + V^2 - 2*Emag*V*cos(Eang-anglev);
-  divres =   numval/Imax^2;
+  divres = numval/Imax^2;
   Ra2pXd2 = R_a^2+X_d^2;
   subsval = divres - Ra2pXd2;
   if subsval > 0.0 then
@@ -92,7 +92,5 @@ equation
           extent={{-80,88},{80,-72}},
           textColor={28,108,200},
           textString="V",
-          textStyle={TextStyle.Bold})}),
-                                       Diagram(coordinateSystem(
-          preserveAspectRatio=false)));
+          textStyle={TextStyle.Bold})}));
 end VRe;
